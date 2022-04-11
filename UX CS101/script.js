@@ -1,17 +1,24 @@
-console.log ("hello");
+//this is for main carousel
 var i;
 var slidePosition =0;
-SlideShow(slidePosition);
+LandscapeCarousel(slidePosition);
 
-function slidesPlus(i) {
-    SlideShow(slidePosition+=i);
+function slidesPlus(i, name) {
+    // if(name == "room"){
+    //     roomSlidesPlus(slidePosition+=i);
+    // }
+    // else{
+    //     LandscapeCarousel(slidePosition+=i);
+    // }
+    LandscapeCarousel(slidePosition+=i);
 }
 
 function currentSlide(i) {
-    SlideShow(slidePosition = i);
+    LandscapeCarousel(slidePosition = i);
 }
 
-function SlideShow() {
+function LandscapeCarousel() {
+   
     var slides= document.getElementsByClassName("carouselslides");
     var slideMarker= document.getElementsByClassName("currentslidemarker");
     if (i>slideMarker.length) {
@@ -30,7 +37,47 @@ function SlideShow() {
     for(i=0;i<slideMarker.length;i++){
         slideMarker[i].className = slideMarker[i].className.replace(" enable", "");
     }
+  
     slides[slidePosition-1].style.display ="block";
     slideMarker[slidePosition-1].className += " enable";
-    setTimeout(SlideShow,2000);
+    setTimeout(LandscapeCarousel,2000);
+}
+//this is for rooms carousel
+var j;
+var roomSlidePosition =0;var roomSlides= document.getElementsByClassName("roomcarouselslides");
+    var roomSlideMarker= document.getElementsByClassName("roomcurrentslidemarker");
+RoomsCarousel(roomSlidePosition);
+
+function roomSlidesPlus(j) {
+    RoomsCarousel(roomSlidePosition+=j);
+}
+
+function roomCurrentSlide(j) {
+    RoomsCarousel(roomSlidePosition = j);
+}
+
+function RoomsCarousel() {
+    
+    
+    if (j>roomSlideMarker.length) {
+        roomSlidePosition =1;
+    }
+    if (j<1) {
+        roomSlidePosition = roomSlides.length;
+    }
+    for (j=0;j<roomSlides.length;j++){
+        roomSlides[j].style.display = "none";
+    }
+    roomSlidePosition++;
+    if (roomSlidePosition >roomSlides.length) {
+        roomSlidePosition = 1;
+    }
+    for(j=0;j<roomSlideMarker.length;j++){
+        roomSlideMarker[j].classname = roomSlideMarker[j].className.replace(" roomenable", "");
+    }
+  
+    
+    roomSlides[roomSlidePosition-1].style.display ="block";
+    roomSlideMarker[roomSlidePosition-1].className += " roomenable";
+    setTimeout(RoomsCarousel,2000);
 }

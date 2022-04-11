@@ -65,6 +65,19 @@ h4 {
     background-color: chocolate;
 }
 
+#intotextCentered, #introtextCentered p, #introtextCentered h3 {
+    display: block;
+    text-align: center;
+    /* clear:left; */
+    padding-left: 2%;
+    padding-right: 2%;
+    width:100%;
+    font-size: 1em;
+    padding-bottom: 2%;
+    /* padding-top:10%; */
+    background-color: chocolate;
+}
+
 p {
     font-family: arial;
 }
@@ -143,9 +156,68 @@ p {
 .secondparagraph {
 margin: -1%;
 }
+/*carousels on gallery page*/
+#carouselGallery {
+    float:left;
+    /* padding-right: 4%; */
+    padding-bottom: 2%;
+    background-color: blueviolet;
+    width:50%;
+    /* display: inline-block; */
+    /* margin-block-start:-12%; */
+}
+
+#carouselGalleryRoom{
+    float:right;
+    /* padding-right: 4%; */
+    padding-bottom: 2%;
+    background-color: blueviolet;
+    width:50%;
+    /* display: inline-block; */
+    /* margin-block-start:-12%; */
+}
+
+#carouselGallery ul {
+    height:100%;
+    width:100%;
+    box-sizing:border-box;
+    padding: 0 4% 0 4%;
+}
+
+img.carouselslides {
+    max-height:100%;
+    max-width:100%;
+    height:fit-content;
+    width:fit-content;
+}
+
+#galleryforwardbutton, #gallerybackbutton ,#roomforwardbutton, #roombackbutton {
+    cursor:pointer;
+    position: absolute;
+    top:48%;
+    width:auto;
+    margin-top:3%;
+    padding:1%;
+    color: green;
+    font-weight: bold;
+    font-size: large;
+    transition:0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select:none;
+}
+
+#roombackbutton, #gallerybackbutton {
+    right:50%;
+    border-radius: 4px 0 0 4px;
+}
+
+#galleryforwardbutton, #gallerybackbutton ,#roomforwardbutton, #roombackbutton {
+    background-color: crimson;
+}
 
 
 
+/*main carousel*/
 .carousel {
     float:right;
     /* padding-right: 4%; */
@@ -172,11 +244,11 @@ img.carouselslides {
 
 .forwardbutton, .backbutton {
     cursor:pointer;
-    position: relative;
+    position: absolute;
     top:48%;
     width:auto;
-    margin-top:-23px;
-    padding:17px;
+    margin-top:5%;
+    padding:1%;
     color: green;
     font-weight: bold;
     font-size: large;
@@ -184,10 +256,9 @@ img.carouselslides {
     border-radius: 0 5px 5px 0;
     user-select:none;
 }
-/*work on this please*/
 
 .forwardbutton {
-    right:80%;
+    right:-0%;
     border-radius: 4px 0 0 4px;
 }
 
@@ -232,6 +303,7 @@ img.carouselslides {
     to {opacity:2}
 }
 
+/*'book' rooms aside on each page*/
 .roomsquicklink {
     background-color: rgb(218, 131, 131);
     float:right;
@@ -254,12 +326,12 @@ img.carouselslides {
     float:left;
     padding-inline-start: 6.5%;
 }
-
+/*reviews aside on each page*/
 .reviews {
     width:70%;
     float:right;
 }
-
+/*footer on each page*/
 .footer {
     font-family: 'sorts mill goudy';
     background-color: rgb(218, 89, 89);
