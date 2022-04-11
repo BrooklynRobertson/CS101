@@ -3,7 +3,7 @@ var i;
 var slidePosition =0;
 LandscapeCarousel(slidePosition);
 
-function slidesPlus(i, name) {
+function slidesPlus(i) {
     // if(name == "room"){
     //     roomSlidesPlus(slidePosition+=i);
     // }
@@ -42,6 +42,12 @@ function LandscapeCarousel() {
     slideMarker[slidePosition-1].className += " enable";
     setTimeout(LandscapeCarousel,2000);
 }
+
+
+
+
+
+
 //this is for rooms carousel
 var j;
 var roomSlidePosition =0;var roomSlides= document.getElementsByClassName("roomcarouselslides");
