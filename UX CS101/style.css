@@ -216,16 +216,17 @@ margin: -1%;
     /* margin-block-start:-12%; */
 }
 
-#carouselGallery ul {
+#carouselGallery ul, #carouselGalleryRoom ul {
     height:100%;
     width:100%;
     box-sizing:border-box;
     padding: 0 4% 0 4%;
 }
 
-img.carouselslides {
+img.carouselslides, img.roomcarouselslides{
     max-height:100%;
     max-width:100%;
+    object-fit: inherit;
     height:fit-content;
     width:fit-content;
 }
@@ -243,16 +244,20 @@ img.carouselslides {
     transition:0.4s ease;
     border-radius: 0 5px 5px 0;
     user-select:none;
+    background-color: crimson;
 }
 
-#roombackbutton, #gallerybackbutton {
+#roomforwardbutton {
+    right:-0%;
+    border-radius: 4px 0 0 4px;
+}
+
+#galleryforwardbutton {
     right:50%;
     border-radius: 4px 0 0 4px;
 }
 
-#galleryforwardbutton, #gallerybackbutton ,#roomforwardbutton, #roombackbutton {
-    background-color: crimson;
-}
+
 
 
 
@@ -294,6 +299,7 @@ img.carouselslides {
     transition:0.4s ease;
     border-radius: 0 5px 5px 0;
     user-select:none;
+    background-color: crimson;
 }
 
 .forwardbutton {
@@ -301,11 +307,9 @@ img.carouselslides {
     border-radius: 4px 0 0 4px;
 }
 
-.forwardbutton, .backbutton {
-    background-color: crimson;
-}
 
-.currentslidemarker {
+
+.currentslidemarker, .roomcurrentslidemarker {
     cursor:pointer;
     height: 2px;
     width: 16px;
@@ -316,12 +320,12 @@ img.carouselslides {
     transition: background-color 0.5s ease;
 }
 
-.slideshowplacement {
+.slideshowplacement, .roomslideshowplacement{
     text-align: center;
     margin-top: -5%;
 }
 
-.enable, .slideshowplacement:hover {
+.enable, .roomenable, .slideshowplacement:hover, .roomslideshowplacement:hover {
     background-color: blueviolet;
 }
 
