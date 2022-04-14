@@ -1,3 +1,6 @@
+
+
+
 // //this is for main carousel
 // var i;
 // var imageIndex =0;

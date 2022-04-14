@@ -1,3 +1,5 @@
+/*ACROSS ALL PAGES*/
+
 @font-face {
     font-family: "Sorts Mill Goudy";
     src: url("sorts-mill-goudy/SortsMillGoudy-Regular.ttf");
@@ -52,43 +54,6 @@ h4 {
     font-family: 'sorts mill goudy';
 }
 
-.introtext {
-    display: inline-block;
-    text-align: center;
-    clear:left;
-    padding-left: 2%;
-    padding-right: 2%;
-    width:40%;
-    font-size: 1em;
-    padding-bottom: 2%;
-    /* padding-top:10%; */
-    background-color: chocolate;
-}
-
-#aboutintrotext {
-    display: block;
-    text-align: center;
-    padding-left: 2%;
-    padding-right: 2%;
-    font-size: 1em;
-    padding-bottom: 2%;
-    /* padding-top:10%; */
-    background-color: chocolate;
-}
-
-#introtextCentered, #introtextCentered p, #introtextCentered h3 {
-    display: block;
-    text-align: center;
-    /* clear:left; */
-    padding-left: 2%;
-    padding-right: 2%;
-    width:100%;
-    font-size: 1em;
-    padding-bottom: 2%;
-    /* padding-top:10%; */
-    background-color: chocolate;
-}
-
 p {
     font-family: arial;
 }
@@ -126,52 +91,12 @@ p {
 }
 
 
-
 .rightAligned {
     float: right;
 }
 
 .leftAligned{
     float:left;
-}
-
-/* .clear {
-    clear:both;
-} */
-
-.sellingpoints {
-    display:inline-block;
-    background-color: rgb(38, 105, 52);
-    padding-left: 2%;
-    padding-right: 2%;
-    width:40%;
-    font-size: 1em;
-    padding-bottom: 5%;
-    /* overflow:hidden; */
-    /* position:absolute;
-    top:auto; */
-
-    /* margin:200px auto; */
-}
-
-#aboutpoints {
-    display:inline-block;
-    background-color: rgb(38, 105, 52);
-    padding-left: 2%;
-    padding-right: 2%;
-    font-size: 1em;
-    padding-bottom: 5%;
-    /* overflow:hidden; */
-    /* position:absolute;
-    top:auto; */
-
-    /* margin:200px auto; */
-}
-#aboutpoints p {
-    width:75%;
-}
-#lauratimquote {
-    font-style: italic;
 }
 
 .join {
@@ -186,7 +111,80 @@ p {
     display:block;
  }
 
+/*'book' rooms aside on each page*/
+.roomsquicklink {
+    background-color: rgb(218, 131, 131);
+    float:right;
+    padding-bottom: 5%;
+    width:50%;
+    padding-right: 4%;
+}
 
+#roomslogo {
+    height:25%;
+    width:25%;
+    border: 5px solid #AF3800;
+    float:left;
+}
+
+#quickbook {
+    font-family: 'sorts mill goudy';
+    text-align:center;
+    font-weight: bold;
+    float:left;
+    padding-inline-start: 6.5%;
+}
+/*reviews aside on each page*/
+.reviews {
+    width:70%;
+    float:right;
+}
+/*footer on each page*/
+.footer {
+    font-family: 'sorts mill goudy';
+    background-color: rgb(218, 89, 89);
+    float:right;
+    text-align:center;
+    margin-block-start: 0em;
+}
+
+.footericons {
+    height:50px;
+    width:50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    float:right;
+}
+
+/*WELCOME PAGE/INDEX*/
+
+
+.introtext {
+    display: inline-block;
+    text-align: center;
+    clear:left;
+    padding-left: 2%;
+    padding-right: 2%;
+    width:40%;
+    font-size: 1em;
+    padding-bottom: 2%;
+    /* padding-top:10%; */
+    background-color: chocolate;
+}
+.sellingpoints {
+    display:inline-block;
+    background-color: rgb(38, 105, 52);
+    padding-left: 2%;
+    padding-right: 2%;
+    width:40%;
+    font-size: 1em;
+    padding-bottom: 5%;
+    /* overflow:hidden; */
+    /* position:absolute;
+    top:auto; */
+
+    /* margin:200px auto; */
+}
 .sellingpoints p {
     width:75%;
     
@@ -195,72 +193,6 @@ p {
 .secondparagraph {
 margin: -1%;
 }
-/*carousels on gallery page*/
-#carouselGallery {
-    float:left;
-    /* padding-right: 4%; */
-    padding-bottom: 2%;
-    background-color: blueviolet;
-    width:50%;
-    /* display: inline-block; */
-    /* margin-block-start:-12%; */
-}
-
-#carouselGalleryRoom{
-    float:right;
-    /* padding-right: 4%; */
-    padding-bottom: 2%;
-    background-color: blueviolet;
-    width:50%;
-    /* display: inline-block; */
-    /* margin-block-start:-12%; */
-}
-
-#carouselGallery ul, #carouselGalleryRoom ul {
-    height:100%;
-    width:100%;
-    box-sizing:border-box;
-    padding: 0 4% 0 4%;
-}
-
-img.carouselslides, img.roomcarouselslides{
-    max-height:100%;
-    max-width:100%;
-    object-fit: inherit;
-    height:fit-content;
-    width:fit-content;
-}
-
-#galleryforwardbutton, #gallerybackbutton ,#roomforwardbutton, #roombackbutton {
-    cursor:pointer;
-    position: absolute;
-    top:48%;
-    width:auto;
-    margin-top:3%;
-    padding:1%;
-    color: green;
-    font-weight: bold;
-    font-size: large;
-    transition:0.4s ease;
-    border-radius: 0 5px 5px 0;
-    user-select:none;
-    background-color: crimson;
-}
-
-#roomforwardbutton {
-    right:-0%;
-    border-radius: 4px 0 0 4px;
-}
-
-#galleryforwardbutton {
-    right:50%;
-    border-radius: 4px 0 0 4px;
-}
-
-
-
-
-
 /*main carousel*/
 .carousel {
     float:right;
@@ -345,48 +277,129 @@ img.carouselslides {
     from {opacity:0.5}
     to {opacity:2}
 }
+/*ABOUT PAGE*/
+#aboutintrotext{
+    display:flow-root;
+    text-align: center;
+    padding-left: 2%;
+    height:auto;
+    width:auto;
+    padding-right: 2%;
+    font-size: 1em;
+    padding-bottom: 2%;
+    /* padding-top:10%; */
+    background-color: chocolate;
+}
 
-/*'book' rooms aside on each page*/
-.roomsquicklink {
-    background-color: rgb(218, 131, 131);
-    float:right;
+#aboutpoints {
+    display:inline-block;
+    background-color: rgb(38, 105, 52);
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1em;
     padding-bottom: 5%;
+    /* overflow:hidden; */
+    /* position:absolute;
+    top:auto; */
+
+    /* margin:200px auto; */
+}
+
+#aboutpoints p {
+    width:75%;
+}
+
+#lauratimquote {
+    font-style: italic;
+}
+
+
+/*GALLERY PAGE*/
+#carouselGallery {
+    float:left;
+    /* padding-right: 4%; */
+    padding-bottom: 2%;
+    background-color: blueviolet;
     width:50%;
-    padding-right: 4%;
+    /* display: inline-block; */
+    /* margin-block-start:-12%; */
 }
 
-#roomslogo {
-    height:25%;
-    width:25%;
-    border: 5px solid #AF3800;
-    float:left;
+#carouselGalleryRoom{
+    float:right;
+    /* padding-right: 4%; */
+    padding-bottom: 2%;
+    background-color: blueviolet;
+    width:50%;
+    /* display: inline-block; */
+    /* margin-block-start:-12%; */
 }
 
-#quickbook {
-    font-family: 'sorts mill goudy';
-    text-align:center;
+#carouselGallery ul, #carouselGalleryRoom ul {
+    height:100%;
+    width:100%;
+    box-sizing:border-box;
+    padding: 0 4% 0 4%;
+}
+
+img.carouselslides, img.roomcarouselslides{
+    max-height:100%;
+    max-width:100%;
+    object-fit: inherit;
+    height:fit-content;
+    width:fit-content;
+}
+
+#galleryforwardbutton, #gallerybackbutton ,#roomforwardbutton, #roombackbutton {
+    cursor:pointer;
+    position: absolute;
+    top:48%;
+    width:auto;
+    margin-top:3%;
+    padding:1%;
+    color: green;
     font-weight: bold;
-    float:left;
-    padding-inline-start: 6.5%;
-}
-/*reviews aside on each page*/
-.reviews {
-    width:70%;
-    float:right;
-}
-/*footer on each page*/
-.footer {
-    font-family: 'sorts mill goudy';
-    background-color: rgb(218, 89, 89);
-    float:right;
-    text-align:center;
-    margin-block-start: 0em;
+    font-size: large;
+    transition:0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select:none;
+    background-color: crimson;
 }
 
-.footericons {
-    height:50px;
-    width:50px;
-    padding-left: 50px;
-    padding-right: 50px;
+#roomforwardbutton {
+    right:-0%;
+    border-radius: 4px 0 0 4px;
+}
+
+#galleryforwardbutton {
+    right:50%;
+    border-radius: 4px 0 0 4px;
+}
+
+/*CONTACT PAGE*/
+
+#googleMap {
+    float:left;
+    
+}
+
+#contactintrotext {
+    display: block;
+    text-align: center;
+    float:left;
+    padding-left: 2%;
+    padding-right: 2%;
+    width:50%;
+    font-size: 1em;
+    padding-bottom: 2%;
+    /* padding-top:10%; */
+    background-color: chocolate;
+}
+
+#contacttitle{
+    padding-left:0%;
+}
+
+#googleMap {
     float:right;
 }
