@@ -1,4 +1,17 @@
-console.log ("hello");
+// nav function to show links on mobile with hamburger link
+function hamburgerClick() {
+    const navIcon = document.querySelector('.nav');
+  
+    if(navIcon.style.display == 'none') {
+      navIcon.style.display = 'flex';
+    } else {
+      navIcon.style.display = 'none';
+    }
+  }
+
+
+
+
 var i;
 var slidePosition =0;
 SlideShow(slidePosition);
@@ -30,7 +43,7 @@ function SlideShow() {
     for(i=0;i<slideMarker.length;i++){
         slideMarker[i].className = slideMarker[i].className.replace(" enable", "");
     }
-    slides[slidePosition-1].style.display ="block";
+    slides[slidePosition-1].style.display ="flex";
     slideMarker[slidePosition-1].className += " enable";
     setTimeout(SlideShow,2000);
 }
