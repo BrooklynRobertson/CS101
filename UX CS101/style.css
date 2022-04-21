@@ -1,93 +1,68 @@
+/* loading the font we will be using into the document */
 @font-face {
-    font-family: "Sorts Mill Goudy";
-    src: url("sorts-mill-goudy/SortsMillGoudy-Regular.ttf");
+  font-family: "Sorts Mill Goudy";
+  src: url("sorts-mill-goudy/SortsMillGoudy-Regular.ttf");
 }
 
+/**/
+
+/* css is styled mobile first, assuming smallest screen is 320x808 (google chromes' "smallest" screen) */
 body {
-    width: 100%;
-    height: 100%;
-    
+    max-width: 90%;
+    margin: 0px;
 }
-
-
-.pageHeadings {
-    position:relative;
-    top: 0em;
-    left:0em;
-    margin-top: -20px;
-    }
-    
-    .pageHeadings h2{
-        position:relative;
-        margin-top: -20px;
-        font-size: 2.5em;
-        margin-top: -1%;
-        }
-
-
-
-h1 {
-    font-size: 5em;
-    padding-top: 3%;
-    font-family: 'sorts mill goudy';
-    margin-bottom: 0px;;
-}
-
-
-h2 {
-    
-    font-family: 'sorts mill goudy';
-}
-
-h3 {
-    text-align: center;
-    font-family: 'sorts mill goudy';
-}
-
-h4 {
-    margin-top: 5%;
-    margin-bottom: 0;
-    font-family: 'sorts mill goudy';
-}
-
-
-
-
-
-p {
-    font-family: arial;
-}
-
-/* MOBILE - Start of Navigation Settings */
+/*Header*/
 .header {
-    width: 100%;
-    display: grid;
+  width:max-content;
 }
 
-.introContainer-logos {
+.introContainer {
+    font-family: Sorts Mill Goudy;
+    font-weight: 800;
+    font-size: x-large;
     display: flex;
-    align-items: center;
+    height: 200px;
+    gap: 20px;
 }
 
-.introContainer-nav {
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 50px;
+#logo {
+  width: auto;
+  flex-basis: calc( 100vw / 4);
+  height: 100px;
 }
 
-.logo {
-    margin: 0 20px 0 20px;
-    width: 8em;
-    height: 8em;
-    /*The next set of settings is to set the logo positioned nicely compared to the div its in.*/
+.pageHeadings{
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+  
+}
+
+h2, h1 {
+    margin-top: 0px;
+    margin-bottom: 0%;
+    flex-grow: 2;
+}
+
+#mobileNavButton {
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+#mobileNavImg {
+  height: 30%;
+  flex-basis: calc( 100vw / 4);
+  align-content: space-around;
+  justify-content: flex-end;
 }
 
 .nav {
-    display: none;
-    justify-content: center;
-    column-gap: 20px;
+  font-size: 2em;
+  display: none;
+  justify-content: flex-end;
+  column-gap: 20px;
 }
+
 
 .navButton {
     text-decoration: none;
@@ -99,570 +74,16 @@ p {
 }
 
 .navButton:hover {
-        text-shadow: 2px 2px 5px #af3800;
-        color: black;
-        border-radius: 3px;
+    text-shadow: 2px 2px 5px #af3800;
+    color: black;
+    border-radius: 3px;
 }
-
-.navIcon {
-    height: 40px;
-    width: 70px;
-    position: absolute;
-    right: 10px;
-    top: 0px;
+.footer {
+  /* placeholder */
 }
-
-/* MOBILE -  End of Navigation Settings */
-
-
-
-
-
-/* .nav {
-    float: right;
-    list-style-type: none;
-    padding-top: 0%;
-    font-family: 'sorts mill goudy';
-    font-size: 150%;
-    font-weight: 700;
-    background-color: black;
-    
-}
-
-.navbutton{
-    float: left;
-    display: block;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-family: 'sorts mill goudy';
-} */
-
-.main {
-    
-    background-color: blue;
-   /* padding-bottom: 30%; */
-}
-
-.textimages {
-    height:20%;
-    width:20%;
-    padding-top:2%;
-    clear:both;
-    display: inline-block;
-}
-
-
-
-.rightAligned {
-    float: right;
-}
-
-.leftAligned{
-    float:left;
-}
-
- .roomsquicklink:before {
-    content:'';
-    clear:both;
-    display:block;
- }
-
-
-.sellingpoints p {
-    width:75%;
-}
-
-.secondparagraph {
-margin: -1%;
-}
-
-
-
-
-
-
-
-
-
-
-
-.reviews {
-    background-color: aquamarine;
-    display: inline-block;
-}
-
-
-/* DESKTOP - Start of Navigation Settings */
-/* DESKTOP - Start of Navigation Settings */
-@media (min-width: 900px) {
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 0 20px 0;
-    }
-
-    .introContainer-nav {
-        height: auto;
-        top:6em;
-    }
-
-    .nav {
-        align-items: center;
-        display: flex;
-        column-gap: 20px;
-    }
-
-    .navIcon {
-        display:none;
-    }
-}
-@media (min-width: 1080px) {
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 0 20px 0;
-    }
-
-    .introContainer-nav {
-        height: auto;
-        top:6em;
-    }
-
-    .nav {
-        align-items: center;
-        display: flex;
-        column-gap: 20px;
-    }
-
-    .navIcon {
-        height: 40px;
-        width: 70px;
-        position: absolute;
-        right: 10px;
-        top: 0px;
-    }
-}
-/* DESKTOP - End of Navigation Settings */
-/* DESKTOP - Start of Page Heading Settings */
-@media (max-width: 900px) {
-.pageHeadings {
-position:relative;
-top: 0em;
-left:2em;
-margin-top: -20px;
-}
-
-.pageHeadings h2{
-    position:relative;
-    margin-top: -20px;
-    font-size: 2.5em;
-    margin-top: -1%;
-    }
-}
-@media (min-width: 900px) {
-    .pageHeadings {
-    position:relative;
-    top: 0em;
-    left:0em;
-    margin-top: -20px;
-    }
-    h1{
-        font-size: 3em;;
-    }
-    .logo {
-        margin: 0% 0% 0% 0%;
-        width: 8em;
-        height: 8em;
-        /*The next set of settings is to set the logo positioned nicely compared to the div its in.*/
-    }
-    .pageHeadings h2{
-        position:relative;
-        margin-top: -20px;
-        font-size: 2em;
-        margin-top: -1%;
-        }
-    }
-/* DESKTOP - End of Page Heading Settings */
-/* DESKTOP - Start of Carousel Settings */
-@media (max-width: 900px) {.carousel {
-    display:flex;
-    justify-content: center;
-    /* padding-right: 4%; */
-    padding-top: 2%;
-    background-color: blueviolet;
-    
-    /* display: inline-block; */
-    /* margin-block-start:-12%; */
-}
-
-.carousel ul {
-    height:100%;
-    width:100%;
-    box-sizing:border-box;
-    padding: 0 4% 0 4%;
-}
-
-img.carouselslides {
-    height:auto;
-    max-width:100%;
-    overflow: hidden;
-    /* height:fit-content;
-    width:fit-content; */
-}
-
-.forwardbutton, .backbutton {
-    cursor:pointer;
-    position: relative;
-    top:48%;
-    width:auto;
-    margin-top:-23px;
-    padding:17px;
-    color: green;
-    font-weight: bold;
-    font-size: large;
-    transition:0.4s ease;
-    border-radius: 0 5px 5px 0;
-    user-select:none;
-}
-/*work on this please*/
-
-.forwardbutton {
-    right:80%;
-    border-radius: 4px 0 0 4px;
-}
-
-.forwardbutton, .backbutton {
-    background-color: crimson;
-}
-
-.currentslidemarker {
-    cursor:pointer;
-    height: 2px;
-    width: 16px;
-    margin: 0 10px;
-    background-color: #acc;
-    border-radius: 30%;
-    display: inline-block;
-    transition: background-color 0.5s ease;
-}
-
-.slideshowplacement {
-    text-align: center;
-    margin-top: -5%;
-}
-
-.enable, .slideshowplacement:hover {
-    background-color: blueviolet;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.4s;
-    animation-name: fade;
-    animation-duration: 1.4s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: 0.5}
-    to {opacity:2}
-}
-
-@keyframes fade {
-    from {opacity:0.5}
-    to {opacity:2}
-}
-}
-    
-    @media (min-width: 900px) {
-        .carousel {
-            float:right;
-            padding-bottom: 2%;
-            background-color: blueviolet;
-            width:50%;
-        }
-        
-        .carousel ul {
-            height:auto;
-            width:100%;
-            box-sizing:border-box;
-            padding: 0 4% 0 4%;
-        }
-        
-        img.carouselslides {
-            max-height:auto;
-            max-width:100%;
-        }
-        
-        .forwardbutton, .backbutton {
-            cursor:pointer;
-            position: absolute;
-            top:48%;
-            width:auto;
-            margin-top:5%;
-            padding:1%;
-            color: green;
-            font-weight: bold;
-            font-size: large;
-            transition:0.4s ease;
-            border-radius: 0 5px 5px 0;
-            user-select:none;
-        }
-        
-        .forwardbutton {
-            right:-0%;
-            border-radius: 4px 0 0 4px;
-        }
-        
-        .forwardbutton, .backbutton {
-            background-color: crimson;
-        }
-        
-        .currentslidemarker {
-            cursor:pointer;
-            height: 2px;
-            width: 16px;
-            margin: 0 10px;
-            background-color: #acc;
-            border-radius: 30%;
-            display: inline-block;
-            transition: background-color 0.5s ease;
-        }
-        
-        .slideshowplacement {
-            text-align: center;
-            margin-top: -5%;
-        }
-        
-        .enable, .slideshowplacement:hover {
-            background-color: blueviolet;
-        }
-        
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.4s;
-            animation-name: fade;
-            animation-duration: 1.4s;
-        }
-        
-        @-webkit-keyframes fade {
-            from {opacity: 0.5}
-            to {opacity:2}
-        }
-        
-        @keyframes fade {
-            from {opacity:0.5}
-            to {opacity:2}
-        }
-    }
-        
-    /* DESKTOP - End of Carousel Settings */
-    /* DESKTOP - Start of Intro Text Settings */
-@media (max-width: 900px) {
-    .introText {
-        display: inline-block;
-        text-align: center;
-        background-color: chocolate;
-    }
-    }
-    @media (min-width: 900px) {
-        .introText {
-            display: inline-block;
-            text-align: center;
-            clear:left;
-            padding-left: 2%;
-            padding-right: 2%;
-            width:45%;
-            font-size: 1em;
-            padding-bottom: 2%;
-            background-color: chocolate;
-        }
-        }
-    /* DESKTOP - End of Intro Text Settings */
-        /* DESKTOP - Start of Selling Points Settings */
-@media (max-width: 900px) {
-    .sellingpoints {
-        display:inline-block;
-        background-color: rgb(38, 105, 52);
-        padding-left: 2%;
-        padding-right: 2%;
-        font-size: 1em;
-        padding-bottom: 5%;
-        /* overflow:hidden; */
-        /* position:absolute;
-        top:auto; */
-    
-        /* margin:200px auto; */
-    }
-    }
-    @media (min-width: 900px) {
-        .sellingpoints {
-            display:inline-block;
-            background-color: rgb(38, 105, 52);
-            padding-left: 2%;
-            padding-right: 2%;
-            width:45%;
-            font-size: 1em;
-            padding-bottom: 5%;
-            /* overflow:hidden; */
-            /* position:absolute;
-            top:auto; */
-        
-            /* margin:200px auto; */
-        }
-        
-        
-        .sellingpoints p {
-            width:75%;
-        }
-        
-        .secondparagraph {
-        margin: -1%;
-        }
-        }
-    /* DESKTOP - End of Selling Points Settings */
-            /* DESKTOP - Start of Rooms Quick Link Settings */
-@media (max-width: 900px) {
-    .roomsquicklink {
-        position:relative;
-        text-align: center;
-        background-color: rgb(218, 131, 131);
-      }
-      
-    
-      #roomslogo {
-        height:auto;
-        width:80%;
-        /* border: 5px solid #AF3800; */
-    }
-      .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: #12479d72;
-      }
-      
-      .roomsquicklink:hover .overlay {
-        opacity: 1;
-      }
-      
-      #quickbook {    
-        font-family: 'sorts mill goudy';
-        font-weight: bold;
-        text-align: center;
-        color: black;
-        font-size: 3em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-      }
-    }
-    @media (min-width: 900px) {
-        .roomsquicklink:before {
-            content:'';
-            clear:both;
-            display:block;
-         }
-         .roomsquicklink {
-            background-color: rgb(218, 131, 131);
-            float:left;
-        }
-        
-        #roomslogo {
-            height:30%;
-            width:30%;
-            float:left;
-            padding-left: 4%;
-        }
-        .overlay {
-            position: inherit;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            width: 30%;
-            opacity: 0;
-            transition: .5s ease;
-            background-color: #12479d72;
-          }
-          
-          .roomsquicklink:hover .overlay {
+    /*this is to make the overlay happen on hover but on a phone (on touch but not click)*/
+    @media(hover: hover) and (pointer: fine) {
+        .roomsquicklink:hover .overlay {
             opacity: 1;
-          }
-        #quickbook {
-            font-family: 'sorts mill goudy';
-            text-align:center;
-            font-weight: bold;
         }
-
-        }
-    /* DESKTOP - End of Rooms Quick Link Settings */
-
-                /* DESKTOP - Start of Reviews Settings */
-@media (max-width: 900px) {
-    .reviews {
-        background-color: aquamarine;
-        display: inline-block;
     }
-   
-    }
-    @media (min-width: 900px) {
-        
-/*reviews aside on each page*/
-            .reviews {
-                width:70%;
-                float:right;
-                position: absolute;
-                left:30%;
-            }
-        }
-    /* DESKTOP - End of Reviews Settings */
-        /* DESKTOP - End of Rooms Quick Link Settings */
-
-                /* DESKTOP - Start of Footer Settings */
-@media (max-width: 900px) {
-    .reviews {
-        background-color: aquamarine;
-        display: inline-block;
-    }
-   
-    }
-    @media (min-width: 900px) {
-   /*footer on each page*/
-   .footer p{
-    font-family: 'sorts mill goudy';
-    background-color: rgb(218, 89, 89);
-    text-align:center;
-}
-
-
-.footericons a {
-    
-    padding-left:10%;
-    width: 20%;
-    float:right;
-}
-
-.footer img {
-    position:relative;
-    right:40%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    height:auto;
-    width:50%
-}
-        }
-    /* DESKTOP - End of Footer Settings */
-            
-            
