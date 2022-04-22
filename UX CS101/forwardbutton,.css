@@ -1,0 +1,17 @@
+.forwardbutton,
+.backbutton {
+  cursor: pointer;
+  width: auto;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: xx-large;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+#slideButtons {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+}

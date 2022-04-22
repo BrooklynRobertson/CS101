@@ -8,52 +8,70 @@
 
 /* css is styled mobile first, assuming smallest screen is 320x808 (google chromes' "smallest" screen) */
 body {
-    max-width: 90%;
-    margin: 0px;
+  margin: 0px;
+}
+p {
+  font-family: arial;
+  font-size: 1.3em;
+}
+
+h3{
+   text-align: center;
+   font-size: 1.6em;
+}
+h4{
+    font-size: 2em;
 }
 /*Header*/
 .header {
-  width:max-content;
-}
-
-.introContainer {
-    font-family: Sorts Mill Goudy;
-    font-weight: 800;
-    font-size: x-large;
-    display: flex;
-    height: 200px;
-    gap: 20px;
+  display: contents;
 }
 
 #logo {
   width: auto;
-  flex-basis: calc( 100vw / 4);
-  height: 100px;
+  /* flex-basis: calc( 100vw / 4); */
+  height: 30%;
 }
 
-.pageHeadings{
-  flex-basis: 100%;
+.introContainer {
+  font-family: Sorts Mill Goudy;
+  font-weight: 800;
+  font-size: x-large;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 200px;
+  gap: 20px;
+}
+
+h2,
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0%;
+  flex-grow: 2;
+}
+
+.pageHeadings {
+  flex-basis: 60%;
   flex-wrap: nowrap;
-  
-}
-
-h2, h1 {
-    margin-top: 0px;
-    margin-bottom: 0%;
-    flex-grow: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 #mobileNavButton {
+  display: flex;
   flex-wrap: wrap;
   align-content: space-around;
-  justify-content: space-around;
+  align-items: flex-end;
 }
 
 #mobileNavImg {
-  height: 30%;
-  flex-basis: calc( 100vw / 4);
-  align-content: space-around;
-  justify-content: flex-end;
+  height: 2em;
+  flex-basis: calc(100vw / 4);
+}
+
+#active {
+    text-shadow: 2px 2px 5px #af3800;
 }
 
 .nav {
@@ -63,27 +81,207 @@ h2, h1 {
   column-gap: 20px;
 }
 
-
 .navButton {
-    text-decoration: none;
-    font-family: 'sorts mill goudy';
-    color: black;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 7px 10px;
+  text-decoration: none;
+  font-family: "sorts mill goudy";
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 7px 10px;
 }
 
 .navButton:hover {
-    text-shadow: 2px 2px 5px #af3800;
+  text-shadow: 2px 2px 5px #af3800;
+  color: black;
+  border-radius: 3px;
+}
+
+/*Carousel on home page*/
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+  background-color: blueviolet;
+}
+
+.carousel ul {
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 4% 0 4%;
+  text-align-last: center;
+}
+
+img.carouselslides {
+  height: auto;
+  max-width: 90%;
+}
+
+.currentslidemarker {
+  cursor: pointer;
+  height: 4px;
+  width: 20px;
+  margin: 0 30px;
+  background-color: #acc;
+  border-radius: 20%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.slideshowplacement {
+  text-align: center;
+  margin-top: -5%;
+}
+
+.enable,
+.slideshowplacement:hover {
+  background-color: blueviolet;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 2;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 2;
+  }
+}
+
+
+.introText p,
+.introText {
+  display: inline-block;
+  text-align: center;
+  background-color: chocolate;
+}
+
+.sellingPoints{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+  background-color: rgb(38, 105, 52);
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 1em;
+  padding-bottom: 5%;
+}
+#secondParagraph{
+    margin-top: 0px;
+}
+
+.sellingPoints p {
+    flex-wrap: wrap;
+  width: 100%;
+  margin-top:10%;
+}
+
+
+.twoLodges{
+    grid-column: 1 ;
+  grid-row: 1 ;
+}
+#twoLodgesText{
+    grid-column: 2 / 4 ;
+  grid-row: 1 ;
+}
+.methvenCentre{
+    text-align: right;
+    grid-column: 3 / 4 ;
+  grid-row: 2 ;
+}
+#methvenCentreText{
+    grid-column: -4 / -2 ;
+  grid-row: 2 ;
+}
+.freeWifi{
+    grid-column: 1 ;
+  grid-row: 3 ;
+}
+#freeWifiText{
+    grid-column: -3 / -1 ;
+  grid-row: 3 ;
+}
+
+.textImages {
+    height:6em;
+    width:auto;
+}
+
+.roomsquicklink{
+    text-align: center;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    
+    background-color: #12479d;
+}
+#roomslogo {
+    height: auto;
+    width: 100%;
+    opacity: 0.5;
+}
+#quickbook {
+    font-family: 'sorts mill goudy';
+    font-weight: bold;
+    text-align: center;
     color: black;
-    border-radius: 3px;
+    font-size: 6em;
+    position: relative;
+    bottom: 400px;
+    border-style: solid;
+    border-width: 12px;
 }
+.reviews{
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.reviews > h4 {
+    align-self: flex-start;
+}
+    
+
 .footer {
-  /* placeholder */
+    font-family: 'sorts mill goudy';
+    background-color: rgb(218, 89, 89);
+    text-align: center;
 }
-    /*this is to make the overlay happen on hover but on a phone (on touch but not click)*/
-    @media(hover: hover) and (pointer: fine) {
-        .roomsquicklink:hover .overlay {
-            opacity: 1;
-        }
-    }
+.footericons {
+
+    background-color: rgb(218, 89, 89);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+
+.footer img {
+    height: 20%;
+    width: auto;
+}
+
