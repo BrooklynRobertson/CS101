@@ -12,6 +12,25 @@ console.log(navButtons);
 
 
 }
+//setting real viewport height to use as variable
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+  
+//setting real viewport width to use as variable
+  let vw = window.innerWidth * 0.01;
+document.documentElement.style.setProperty('--vw', `${vw}px`);
+
+//add to listen to resizing
+window.addEventListener('resize', () => {
+   
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    let vw = window.innerWidth * 0.01;
+    document.documentElement.style.setProperty('--vw', `${vw}px`);
+  });
+
+
+
 
 //function to show pop up of active deals
 function activeDeals() {

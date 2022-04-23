@@ -252,7 +252,7 @@ p {
 
     .enable,
     .slideshowplacement:hover {
-        background-color: blueviolet;
+        display: none;
     }
 
     .fade {

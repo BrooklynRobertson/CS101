@@ -15,3 +15,13 @@
   width: 90vw;
   justify-content: space-between;
 }
+
+
+
+height: calc(var(--vh, 1vh) * 4);
+width: calc(var(--vw, 1vw) * 4);
+
+
+
+
+max screen for mobile view = 1050px

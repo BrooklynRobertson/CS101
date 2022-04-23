@@ -14,11 +14,11 @@
             <div class="introContainer">
                 <img src="images_and_icons/mountain.png"
                     alt="Snow_Denn_Lodge_Logo" id="logo" />
-                <div class="pageHeadings">
-                    <h1>Snow Denn Lodge</h1>
-                    <h2>Private Lodge & Holiday Home</h2>
 
-                </div>
+                <h1 class="pageHeadings">Snow Denn Lodge</h1>
+                <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
+
+
                 <a id="mobileNavButton"><img
                         src="images_and_icons/iconmonstr-menu-1-240.png"
                         class="navIcon" id="mobileNavImg"
@@ -27,7 +27,7 @@
             </div>
             <div class="introContainer-nav overlay">
 
-                <nav  class="nav">
+                <nav class="nav">
                     <a class="navButton" id="active" href="index.html">Welcome</a>
                     <a class="navButton" href="about.html">About</a>
                     <a class="navButton" href="book.html">Book</a>
@@ -102,70 +102,119 @@
             <h3>Here at Snow Denn, we have something for everybody.</h3>
             <section class="sellingPoints">
 
-                <div class="twoLodges">
-                    <h4>Two Separate Lodges</h4>
-                    <img
-                        class="textImages"
-                        src="images_and_icons/iconmonstr-building-3-240.png"
-                        alt="Icon_of_a_lodge/house">
-                </div>
-                <div id="twoLodgesText">
-                    <p>One lodge is run as a Holiday Home
-                        perfect for Families and Friends wanting space to relax
-                        and
-                        enjoy each other's company. </p>
-                    <p id="secondParagraph"> The other lodge is a
-                        Private Family Friendly lodge containing Superking with
-                        en-suite rooms, a family room and a twin bunk room along
-                        with some permanent accommodation rooms.</p>
-                </div>
 
-
-
-                <div class="methvenCentre">
-                    <h4>In the centre of Methven</h4>
-                    <img class="textImages"
-                        src="images_and_icons/iconmonstr-map-8-240.png"
-                        alt="Icon_of_map">
+                <div class="sellingPoint1">
+                 
+                        <h4 id="titleIcon1">Two Separate Lodges</h4>
+                        <img
+                            class="textImages"
+                            src="images_and_icons/iconmonstr-building-3-240.png"
+                            alt="Icon_of_a_lodge/house">
+                   
+                    <div id="sellingPointText1">
+                        <p>One lodge is run as a Holiday Home
+                            perfect for Families and Friends wanting space to
+                            relax
+                            and
+                            enjoy each other's company. </p>
+                        <p id="secondParagraph"> The other lodge is a
+                            Private Family Friendly lodge containing Superking
+                            with
+                            en-suite rooms, a family room and a twin bunk room
+                            along
+                            with some permanent accommodation rooms.</p>
+                    </div>
                 </div>
 
-                
-                    <p id="methvenCentreText">Within a stone's throw away to
+
+                <div class="sellingPoint2">
+                  
+                        <h4 id="titleIcon2">In the centre of Methven</h4>
+                        <img class="textImages"
+                            src="images_and_icons/iconmonstr-map-8-240.png"
+                            alt="Icon_of_map">
+                  
+
+
+                    <p id="sellingPointText2">Within a stone's throw away to
                         local
                         the
                         new Opuke Hot Pools, Cafes, Supermarkets, Bars,
                         Restaurants,
                         Mt Hutt Ski Field, Mt Hutt Bike Park, Golf courses and
                         recreational facilities.</p>
-                
-
-              
-
-                <div class="freeWifi">
-                    <h4>Free unlimited <br> WiFi</h4>
-                    <img class="textImages"
-                        src="images_and_icons/iconmonstr-wireless-7-240.png"
-                        alt="Icon_of_wifi_symbol">
                 </div>
-               
-                    <p id="freeWifiText">Enjoy unlimited WiFi, for those that
+
+
+
+                <div class="sellingPoint3">
+                
+                        <h4 id="titleIcon3">Free unlimited Wi-Fi</h4>
+                        <img class="textImages"
+                            src="images_and_icons/iconmonstr-wireless-7-240.png"
+                            alt="Icon_of_wifi_symbol">
+                    </div>
+
+                    <p id="sellingPointText3">Enjoy unlimited WiFi, for those that
                         want
                         to stay in contact with their folks at home, and those
                         that
                         can't miss their favourite TV series.</p>
-               
+            
+
+
+
             </section>
 
 
         </main>
         <aside class="roomsquicklink">
-<div class="overlay">
-            <img id="roomslogo" src="images_and_icons/roomLogo.png"
-                alt="snowdenn_lodge_rooms_collage">
-            
+
+
+            <div class="bookingContainer">
                 
+                <form id="booking">
+
+                    <div class="checkIn">
+                        <span class="form-label">Check In</span>
+                        <input class="form-control" type="date">
+                        <!-- </div>
+<div class="checkOut"> -->
+                        <span class="form-label">Check Out</span>
+                        <input class="form-control" type="date">
+                    </div>
+
+
+
+
+                    <div class="guests">
+                        <span class="form-label">Guests</span>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <span class="select-arrow"></span>
+
+
+                        <span class="form-label">Kids</span>
+                        <select class="form-control">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                    </div>
+
+
+
+                    <button class="submit-btn">Check availability</button>
+                </form>
             </div>
-            <a href="book.html" id="quickbook">Book Now!</a>
+
+            <!-- <div id="quickbook"></div>
+                <a href="book.html" id="quickbook">Go to Booking Page to secure your room!</a>
+            </div> -->
         </aside>
         <aside class="reviews">
             <h4 id="leftAligned">Reviews</h4>
@@ -189,9 +238,7 @@
         </aside>
         <footer class="footer">
 
-            <p>Snow Denn Lodge
-                <br>6 Bank Street
-                <br>Methven </p>
+
 
             <div class="footericons">
                 <a
@@ -210,7 +257,9 @@
                         alt="active_deals_icon">
                 </a>
             </div>
-
+            <p>Snow Denn Lodge
+                <br>6 Bank Street
+                <br>Methven </p>
 
         </footer>
         <script src="script.js"></script>
