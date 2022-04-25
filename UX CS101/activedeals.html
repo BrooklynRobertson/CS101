@@ -2,24 +2,24 @@
 <html lang="en">
     <head>
         <title>
-            Snow Denn Lodge - About
+            Snow Denn Lodge - Welcome
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
             charset="utf-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="carousel.css">
     </head>
 
     <body>
         <header class="header">
-            <div class="introContainer">
-                <img src="images_and_icons/mountainlogo.png"
+            <div id="title" class="introContainer">
+                <img  src="images_and_icons/mountainlogo.png"
                     alt="Snow_Denn_Lodge_Logo" id="logo" />
 
-                <h1 class="pageHeadings">Snow Denn Lodge</h1>
+                <h1  class="pageHeadings">Snow Denn Lodge</h1>
                 <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
 
 
-                <a id="mobileNavButton"><img
+                <a  id="mobileNavButton"><img
                         src="images_and_icons/navbutton.png"
                         class="navIcon" id="mobileNavImg"
                         alt="hamburger_menu_icon"
@@ -50,81 +50,64 @@
                        area. 
                     </p>
             </section>
-            
-            <section class="aboutPoints">
-
-
-                <div class="aboutPoint1">
-                 
-                        <h4>We have... Happy Guests</h4>
-                        <img
-                            class="textImagesBig"
-                            src="images_and_icons/carousel6.jfif">
-                   
-                    
-                        <p id="aboutPointText1">During the Winter we have had some amazing guests
-                             stay with us and enjoy the beautiful Winter we have had up Mt Hutt.
-                              We look forward to sharing the Summer with many more guests who wish
-                               to make the most of Methven's stunning walks, hikes and Mountain Bike
-                                trails.
-                        </p>
-                    
+            <form action="action_page.php" style="border:1px solid #ccc">
+                <div class="container">
+                  <h1>Sign Up</h1>
+                  <p>Please fill in this form to create an account.</p>
+                  <hr>
+              
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+              
+                  <label for="psw-repeat"><b>Repeat Password</b></label>
+                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+              
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                  </label>
+              
+                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+              
+                  <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                  </div>
                 </div>
+              </form>
 
-
-                <div class="aboutPoint2">
-                  
-                        <h4>Methven's Summer Attractions</h4>
-                        <img class="textImagesBig"
-                            src="images_and_icons/carousel9.jfif">
-                    <p id="aboutPointText2">If you haven't experienced Methven and Mt Hutt in Summer you are missing out. With 
-                        our outstanding DownHill and Cross-Country Mountain bike tracks
-                         which have been developed up Mt Hutt there's not a better place
-                          to be and why not relax and unwind at the brand new Opuke Hot
-                           Pools located just 5 minutes from the lodge. Along with this 
-                           we have some of the most beautiful clear blue lakes which 
-                           host an abundance of fish. And some of New Zealand's best walks
-                            can be found here along with the Te Arora trail sidling along
-                             the side of Mt Hutt.
-                            </p>
+              <form action="action_page.php" method="post">
+                <div class="imgcontainer">
+                  <img src="img_avatar2.png" alt="Avatar" class="avatar">
                 </div>
-
-
-
-                <div class="aboutPoint3">
-                
-                        <h4 >Why choose us?</h4>
-                        <img class="textImagesBig"
-                            src="images_and_icons/funtimes.jpeg">
-                    
-
-                    <p id="aboutPointText3">You might ask what set us apart from all
-                         the other accommodation places in Methven. Well let me tell
-                          you, with young, inspired owners these Lodges have a great,
-                           fun, relaxed vibe. We like to interact with our guests to
-                            offer our knowledge of the area so you can enjoy it as much
-                             as possible. We also strive everyday to keep our 
-                             accommodation up to a high standard that provides you with
-                              maximum comfort and relaxation during your stay, and best
-                               of all we have the largest variety of rooms so there's a
-                                room to suit everyone's choice and budget.</p>
+              
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+              
+                  <button type="submit">Login</button>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
                 </div>
-                    <div id="jobOffer">
-                        <img src="images_and_icons/joboffer.png">
-                        <a href="join.html">Work with us!</a>
-                    </div>
-                    
-
-
-            </section>
-
-
-        </main>
+              
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" class="cancelbtn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+              </form>
+              
+           </main>
         <aside class="roomsquicklink">
         
 
             <div class="bookingContainer sectionOverlay">
-                <h4>Book Now</h4>
+                <h4>Check: Room Availiability</h4>
                 <form id="booking">
 
                     <div class="checkIn">
@@ -140,27 +123,29 @@
 
 
                     <div class="guests">
-                        <span class="form-label">Guests</span>
+                        <span class="form-label">Adults</span>
                         <select class="form-control">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
+                            <option>4+</option>
                         </select>
                         <span class="select-arrow"></span>
 
 
-                        <span class="form-label">Kids</span>
+                        <span class="form-label">Children</span>
                         <select class="form-control">
                             <option>0</option>
                             <option>1</option>
                             <option>2</option>
+                            <option>3+</option>
                         </select>
                         <span class="select-arrow"></span>
                     </div>
 
 
 
-                    <button class="submit-btn">Check availability</button>
+                    <button class="submit-btn">Check Availiability</button>
                 </form>
             </div>
 

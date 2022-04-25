@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>
-            Snow Denn Lodge - About
+            Snow Denn Lodge - Contact
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
             charset="utf-8">
@@ -29,95 +29,71 @@
 
                 <nav class="nav">
                     <a class="navButton" href="index.html">Welcome</a>
-                    <a class="navButton" id="active" href="about.html">About</a>
+                    <a class="navButton" href="about.html">About</a>
                     <a class="navButton" href="book.html">Book</a>
                     <a class="navButton" href="gallery.html">Gallery</a>
-                    <a class="navButton" href="contact.html">Contact</a>
+                    <a class="navButton" id="active" href="contact.html">Contact</a>
+                    <a class="navButton" href="activedeals.html">Deals and Discounts</a>
                 </nav>
             </div>
         </header>
         <main class="main">
             
-            <section class="introText ">
-                <h3>Introducing your hosts - Laura and Tim</h3>
-                <img id ="lauraTim" src="images_and_icons/lauratime.jfif">
-                <p>In May 2018 Laura and Tim took over Snow Denn Lodge. Plenty of 
-                    inspiration and a new, fresh vibe has been brought to Snow Denn
-                     Lodge, which is slowly being updated and rejuvenated. 
-                    With a passion for all things outdoors and participating in nearly
-                     every activity that Methven & Mt Hutt have to offer these two are
-                      the people you want to talk to about things to see and do in the
-                       area. 
-                    </p>
-            </section>
-            
-            <section class="aboutPoints">
-
-
-                <div class="aboutPoint1">
-                 
-                        <h4>We have... Happy Guests</h4>
-                        <img
-                            class="textImagesBig"
-                            src="images_and_icons/carousel6.jfif">
-                   
-                    
-                        <p id="aboutPointText1">During the Winter we have had some amazing guests
-                             stay with us and enjoy the beautiful Winter we have had up Mt Hutt.
-                              We look forward to sharing the Summer with many more guests who wish
-                               to make the most of Methven's stunning walks, hikes and Mountain Bike
-                                trails.
-                        </p>
-                    
-                </div>
-
-
-                <div class="aboutPoint2">
-                  
-                        <h4>Methven's Summer Attractions</h4>
-                        <img class="textImagesBig"
-                            src="images_and_icons/carousel9.jfif">
-                    <p id="aboutPointText2">If you haven't experienced Methven and Mt Hutt in Summer you are missing out. With 
-                        our outstanding DownHill and Cross-Country Mountain bike tracks
-                         which have been developed up Mt Hutt there's not a better place
-                          to be and why not relax and unwind at the brand new Opuke Hot
-                           Pools located just 5 minutes from the lodge. Along with this 
-                           we have some of the most beautiful clear blue lakes which 
-                           host an abundance of fish. And some of New Zealand's best walks
-                            can be found here along with the Te Arora trail sidling along
-                             the side of Mt Hutt.
-                            </p>
-                </div>
-
-
-
-                <div class="aboutPoint3">
+            <section id="introText">
+                <h3>Contact Us</h3>
+                <p >Please use the form below to contact us with any questions, feedback, job enquiries or just to say hey!</p>
+                <p >Alternatively, you can contact us via <a id="linked" href="facebook.com/snowdennlodge">Facebook</a>.</p>
+           
+                <div class="container">
+                    <form action="placeholder.html">
                 
-                        <h4 >Why choose us?</h4>
-                        <img class="textImagesBig"
-                            src="images_and_icons/funtimes.jpeg">
+                         <div>
+                             <label for="fname">First Name</label>
+                  
+                          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                         </div> 
+                 <div>
+                    <label for="lname">Last Name</label>
+                  
+                          <input type="text" id="lname" name="lastname" placeholder="Your last name.."> 
+                 </div>
+                          <div>
+                              <label for="reason">Reason for contact</label>
+                
+                          <select id="reason" name="reason">
+                            <option value="enquiry">General OR General Booking Enquiry</option>
+                            <option value="holiday">Book the Snow Denn Lodge Holiday Home</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="job">Job Enquiry</option>
+                          </select>
+                          </div>
+              
+                          <div>
+                             <label for="subject">Message</label>
+                     
+                          <textarea id="subject" name="subject" placeholder="Write something..(optional)" style="height:200px"></textarea>  
+                          </div>
+              
+                         
+               
+                   
+                        <input type="submit" value="Submit">
+                     
+                    </form>
+                  </div>
+   
                     
+                    <aside id="googleMap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.686906628111!2d171.64373111549713!3d-43.633875079122014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d2dd1d4998e1691%3A0xe6255c35be7ab9bd!2s6%20Bank%20Street%2C%20Methven%207730!5e0!3m2!1sen!2snz!4v1649901928745!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </aside>
 
-                    <p id="aboutPointText3">You might ask what set us apart from all
-                         the other accommodation places in Methven. Well let me tell
-                          you, with young, inspired owners these Lodges have a great,
-                           fun, relaxed vibe. We like to interact with our guests to
-                            offer our knowledge of the area so you can enjoy it as much
-                             as possible. We also strive everyday to keep our 
-                             accommodation up to a high standard that provides you with
-                              maximum comfort and relaxation during your stay, and best
-                               of all we have the largest variety of rooms so there's a
-                                room to suit everyone's choice and budget.</p>
-                </div>
-                    <div id="jobOffer">
+
+            </section>
+<div id="jobOffer">
                         <img src="images_and_icons/joboffer.png">
                         <a href="join.html">Work with us!</a>
                     </div>
-                    
-
-
-            </section>
-
 
         </main>
         <aside class="roomsquicklink">
