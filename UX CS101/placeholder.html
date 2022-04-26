@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Snow Denn Lodge - Welcome
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+            charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="introContainer">
+                <img src="images_and_icons/mountainlogo.png"
+                    alt="Snow_Denn_Lodge_Logo" id="logo" />
+
+                <h1 class="pageHeadings">Snow Denn Lodge</h1>
+                <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
+
+
+                <a id="mobileNavButton"><img
+                        src="images_and_icons/navbutton.png"
+                        class="navIcon" id="mobileNavImg"
+                        alt="hamburger_menu_icon"
+                        onclick="hamburgerClick()"></a>
+            </div>
+            <div class="introContainer-nav overlay">
+
+                <nav class="nav">
+                    <a class="navButton" href="index.html">Welcome</a>
+                    <a class="navButton" id="active" href="about.html">About</a>
+                    <a class="navButton" href="book.html">Book</a>
+                    <a class="navButton" href="gallery.html">Gallery</a>
+                    <a class="navButton" href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            
+            <section class="introText ">
+                <h3>Introducing your hosts - Laura and Tim</h3>
+                <img id ="lauraTim" src="images_and_icons/lauratime.jfif">
+                <p>In May 2018 Laura and Tim took over Snow Denn Lodge. Plenty of 
+                    inspiration and a new, fresh vibe has been brought to Snow Denn
+                     Lodge, which is slowly being updated and rejuvenated. 
+                    With a passion for all things outdoors and participating in nearly
+                     every activity that Methven & Mt Hutt have to offer these two are
+                      the people you want to talk to about things to see and do in the
+                       area. 
+                    </p>
+            </section>
+            
+            <section class="aboutPoints">
+
+
+                <div class="aboutPoint1">
+                 
+                        <h4>We have... Happy Guests</h4>
+                        <img
+                            class="textImagesBig"
+                            src="images_and_icons/carousel6.jfif">
+                   
+                    
+                        <p id="aboutPointText1">During the Winter we have had some amazing guests
+                             stay with us and enjoy the beautiful Winter we have had up Mt Hutt.
+                              We look forward to sharing the Summer with many more guests who wish
+                               to make the most of Methven's stunning walks, hikes and Mountain Bike
+                                trails.
+                        </p>
+                    
+                </div>
+
+
+                <div class="aboutPoint2">
+                  
+                        <h4>Methven's Summer Attractions</h4>
+                        <img class="textImagesBig"
+                            src="images_and_icons/carousel9.jfif">
+                    <p id="aboutPointText2">If you haven't experienced Methven and Mt Hutt in Summer you are missing out. With 
+                        our outstanding DownHill and Cross-Country Mountain bike tracks
+                         which have been developed up Mt Hutt there's not a better place
+                          to be and why not relax and unwind at the brand new Opuke Hot
+                           Pools located just 5 minutes from the lodge. Along with this 
+                           we have some of the most beautiful clear blue lakes which 
+                           host an abundance of fish. And some of New Zealand's best walks
+                            can be found here along with the Te Arora trail sidling along
+                             the side of Mt Hutt.
+                            </p>
+                </div>
+
+
+
+                <div class="aboutPoint3">
+                
+                        <h4 >Why choose us?</h4>
+                        <img class="textImagesBig"
+                            src="images_and_icons/funtimes.jpeg">
+                    
+
+                    <p id="aboutPointText3">You might ask what set us apart from all
+                         the other accommodation places in Methven. Well let me tell
+                          you, with young, inspired owners these Lodges have a great,
+                           fun, relaxed vibe. We like to interact with our guests to
+                            offer our knowledge of the area so you can enjoy it as much
+                             as possible. We also strive everyday to keep our 
+                             accommodation up to a high standard that provides you with
+                              maximum comfort and relaxation during your stay, and best
+                               of all we have the largest variety of rooms so there's a
+                                room to suit everyone's choice and budget.</p>
+                </div>
+                    <div id="jobOffer">
+                        <img src="images_and_icons/joboffer.png">
+                        <a href="join.html">Work with us!</a>
+                    </div>
+                    
+
+
+            </section>
+
+
+        </main>
+        <aside class="roomsquicklink">
+        
+
+            <div class="bookingContainer sectionOverlay">
+                <h4>Book Now</h4>
+                <form id="booking">
+
+                    <div class="checkIn">
+                        <span class="form-label">Check In</span>
+                        <input class="form-control" type="date">
+                        <!-- </div>
+<div class="checkOut"> -->
+                        <span class="form-label">Check Out</span>
+                        <input class="form-control" type="date">
+                    </div>
+
+
+
+
+                    <div class="guests">
+                        <span class="form-label">Guests</span>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <span class="select-arrow"></span>
+
+
+                        <span class="form-label">Kids</span>
+                        <select class="form-control">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                        <span class="select-arrow"></span>
+                    </div>
+
+
+
+                    <button class="submit-btn">Check availability</button>
+                </form>
+            </div>
+
+            <!-- <div id="quickbook"></div>
+                <a href="book.html" id="quickbook">Go to Booking Page to secure your room!</a>
+            </div> -->
+        </aside>
+        <aside class="reviews">
+            <h4 id="leftAligned">Reviews</h4>
+            <p class="review1">"I highly recommend Snowdenn Lodge!! The
+                owners are wonderful and always willing to help, the place
+                is
+                always spotless and it's in a great location for so many
+                activities. Its also a great place to meet fellow
+                adventurers"</p>
+            <p class="reviewDetails">Danielle, via
+                TripAdvisor
+                <br> October 2021</p>
+            <p class="review2">"Great lodge for relaxing while walking
+                Te
+                Araroa. Laura was a great host and helped organise trail
+                transport. Single room was clean and comfortable. Great
+                showers,
+                kitchen, and lounge area." </p>
+            <p class="reviewDetails">Gabe, via Google Reviews
+                <br> March 2022</p>
+        </aside>
+        <footer class="footer">
+
+
+
+            <div class="footericons">
+                <a
+                    href="https://www.facebook.com/SnowDennLodge/?ref=bookmarks">Facebook
+                    <img
+                        src="images_and_icons/iconmonstr-facebook-4-240.png"
+                        alt="Facebook_icon">
+                </a>
+
+                <a href="contact.html">Contact
+                    <img src="images_and_icons/iconmonstr-email-1-240.png"
+                        alt="Email_icon">
+                </a>
+                <a href="test.html" onclick="activeDeals()">Active Deals
+                    <img src="images_and_icons/iconmonstr-tag-22-240.png"
+                        alt="active_deals_icon">
+                </a>
+            </div>
+            <p>Snow Denn Lodge
+                <br>6 Bank Street
+                <br>Methven </p>
+
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>

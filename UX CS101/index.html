@@ -7,179 +7,226 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
             charset="utf-8">
         <link rel="stylesheet" href="style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="carouselScript.js"></script>
     </head>
 
     <body>
-        <header class="header">
-            <div class="introContainer">
-                <img src="images_and_icons/mountain.png"
-                    alt="Snow_Denn_Lodge_Logo" id="logo" />
-
-                <h1 class="pageHeadings">Snow Denn Lodge</h1>
-                <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
+        
+            <header class="header">
+              
 
 
-                <a id="mobileNavButton"><img
-                        src="images_and_icons/iconmonstr-menu-1-240.png"
-                        class="navIcon" id="mobileNavImg"
-                        alt="hamburger_menu_icon"
-                        onclick="hamburgerClick()"></a>
-            </div>
-            <div class="introContainer-nav overlay">
-
-                <nav class="nav">
-                    <a class="navButton" id="active" href="index.html">Welcome</a>
-                    <a class="navButton" href="about.html">About</a>
-                    <a class="navButton" href="book.html">Book</a>
-                    <a class="navButton" href="gallery.html">Gallery</a>
-                    <a class="navButton" href="contact.html">Contact</a>
-                </nav>
-            </div>
-        </header>
-        <main class="main">
-            <section class="carousel">
-                <h3>Snow Denn Lodge and nearby landmarks</h3>
-                <ul>
-                    <li><img class="carouselslides"
-                            src="images_and_icons/carousel10.jfif"
-                            alt="landscape_methven_snowdenn_lodge"></li>
-                    <li><img class="carouselslides"
-                            src="images_and_icons/carousel9.jfif"
-                            alt="landscape_methven_snowdenn_lodge"></li>
-                    <li><img class="carouselslides"
-                            src="images_and_icons/carousel2.jfif"
-                            alt="landscape_methven_snowdenn_lodge"></li>
-                    <li><img class="carouselslides"
-                            src="images_and_icons/carousel8.jfif"
-                            alt="landscape_methven_snowdenn_lodge"></li>
-                    <li><img class="carouselslides"
-                            src="images_and_icons/carousel4.jfif"
-                            alt="landscape_methven_snowdenn_lodge"></li>
-                    <li><img class="carouselslides"
-                            src="images_and_icons/carousel3.jfif"
-                            alt="landscape_methven_snowdenn_lodge"></li>
-                    <li><img class="carouselslides"
-                            src="images_and_icons/carousel7.jfif"
-                            alt="landscape_methven_snowdenn_lodge"></li>
-                    <li><img class="carouselslides"
-                            src="images_and_icons/carousel1.jfif"
-                            alt="landscape_methven_snowdenn_lodge"></li>
 
 
-                </ul>
-                <div class="slider">
-                    <span class="currentslidemarker"
-                        onclick="currentSlide(1)"></span>
-                    <span class="currentslidemarker"
-                        onclick="currentSlide(2)"></span>
-                    <span class="currentslidemarker"
-                        onclick="currentSlide(3)"></span>
-                    <span class="currentslidemarker"
-                        onclick="currentSlide(4)"></span>
-                    <span class="currentslidemarker"
-                        onclick="currentSlide(5)"></span>
-                    <span class="currentslidemarker"
-                        onclick="currentSlide(6)"></span>
-                    <span class="currentslidemarker"
-                        onclick="currentSlide(7)"></span>
-                    <span class="currentslidemarker"
-                        onclick="currentSlide(8)"></span>
 
-                </div>
-            </section>
-            <section class="introText">
-                <h3>Thanks for visiting!</h3>
-                <p>Situated in front of the Southern Alps, Snow Denn Lodge
-                    is
-                    Methven's premier lodge, boasting superior facilities
-                    with a
-                    range of accommodation options to suit all budgets and
-                    requirements. With the Great Outdoors and amazing scenic
-                    views right on your doorstep, it makes for a popular
-                    holiday
-                    destination all year round.</p>
-            </section>
-            <h3>Here at Snow Denn, we have something for everybody.</h3>
-            <section class="sellingPoints">
+                <div class="introContainer parallax" id="header">
+                    <div id="titleMain">
 
+<img src="images_and_icons/mountainlogo.png"
+                        alt="Snow_Denn_Lodge_Logo" id="logo" />
 
-                <div class="sellingPoint1">
-                 
-                        <h4 id="titleIcon1">Two Separate Lodges</h4>
-                        <img
-                            class="textImages"
-                            src="images_and_icons/iconmonstr-building-3-240.png"
-                            alt="Icon_of_a_lodge/house">
-                   
-                    <div id="sellingPointText1">
-                        <p>One lodge is run as a Holiday Home
-                            perfect for Families and Friends wanting space to
-                            relax
-                            and
-                            enjoy each other's company. </p>
-                        <p id="secondParagraph"> The other lodge is a
-                            Private Family Friendly lodge containing Superking
-                            with
-                            en-suite rooms, a family room and a twin bunk room
-                            along
-                            with some permanent accommodation rooms.</p>
+                    <h1 class="pageHeadings">Snow Denn Lodge</h1>
+                    <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
+                    <a id="mobileNavButton"><img
+                            src="images_and_icons/iconmonstr-menu-1-240.png"
+                            class="navIcon" id="mobileNavImg"
+                            alt="hamburger_menu_icon"
+                            onclick="hamburgerClick()"></a>
+
                     </div>
-                </div>
-
-
-                <div class="sellingPoint2">
-                  
-                        <h4 id="titleIcon2">In the centre of Methven</h4>
-                        <img class="textImages"
-                            src="images_and_icons/iconmonstr-map-8-240.png"
-                            alt="Icon_of_map">
-                  
-
-
-                    <p id="sellingPointText2">Within a stone's throw away to
-                        local
-                        the
-                        new Opuke Hot Pools, Cafes, Supermarkets, Bars,
-                        Restaurants,
-                        Mt Hutt Ski Field, Mt Hutt Bike Park, Golf courses and
-                        recreational facilities.</p>
-                </div>
-
-
-
-                <div class="sellingPoint3">
+                    
+              <nav class=" nav ">
+                        <a class="navButton" id="active" href="index.html">Welcome</a>
+                        <a class="navButton" href="about.html">About</a>
+                        <a class="navButton" href="book.html">Book</a>
+                        <a class="navButton" href="placeholder.html">Gallery</a>
+                        <a class="navButton" href="contact.html">Contact</a>
+                        <a class="navButton" href="activedeals.html">Deals and Discounts</a>
+                    </nav>
+           
                 
-                        <h4 id="titleIcon3">Free unlimited Wi-Fi</h4>
-                        <img class="textImages"
-                            src="images_and_icons/iconmonstr-wireless-7-240.png"
-                            alt="Icon_of_wifi_symbol">
-                    </div>
 
-                    <p id="sellingPointText3">Enjoy unlimited WiFi, for those that
-                        want
-                        to stay in contact with their folks at home, and those
-                        that
-                        can't miss their favourite TV series.</p>
-            
+                    
+                
+  </div>
+            </header>
+            <main class="main">
+                <!-- <section class="carousel">
+                    <div class="carouselContainer overlay">
+                        <h3 class="hide">Snow Denn Lodge and nearby landmarks</h3>
+                        
+                        <div class="slider">
+                            <span class="currentslidemarker"
+                                onclick="currentSlide(1)"></span>
+                            <span class="currentslidemarker"
+                                onclick="currentSlide(2)"></span>
+                            <span class="currentslidemarker"
+                                onclick="currentSlide(3)"></span>
+                            <span class="currentslidemarker"
+                                onclick="currentSlide(4)"></span>
+                            <span class="currentslidemarker"
+                                onclick="currentSlide(5)"></span>
+                            <span class="currentslidemarker"
+                                onclick="currentSlide(6)"></span>
+                            <span class="currentslidemarker"
+                                onclick="currentSlide(7)"></span>
+                            <span class="currentslidemarker"
+                                onclick="currentSlide(8)"></span>
+
+                        </div>
+                        <ul>
+                            <li><img class="carouselslides"
+                                    src="images_and_icons/carousel10.jfif"
+                                    alt="landscape_methven_snowdenn_lodge"></li>
+                            <li><img class="carouselslides"
+                                    src="images_and_icons/carousel9.jfif"
+                                    alt="landscape_methven_snowdenn_lodge"></li>
+                            <li><img class="carouselslides"
+                                    src="images_and_icons/carousel2.jfif"
+                                    alt="landscape_methven_snowdenn_lodge"></li>
+                            <li><img class="carouselslides"
+                                    src="images_and_icons/carousel8.jfif"
+                                    alt="landscape_methven_snowdenn_lodge"></li>
+                            <li><img class="carouselslides"
+                                    src="images_and_icons/carousel4.jfif"
+                                    alt="landscape_methven_snowdenn_lodge"></li>
+                            <li><img class="carouselslides"
+                                    src="images_and_icons/carousel3.jfif"
+                                    alt="landscape_methven_snowdenn_lodge"></li>
+                            <li><img class="carouselslides"
+                                    src="images_and_icons/carousel7.jfif"
+                                    alt="landscape_methven_snowdenn_lodge"></li>
+                            <li><img class="carouselslides"
+                                    src="images_and_icons/carousel1.jfif"
+                                    alt="landscape_methven_snowdenn_lodge"></li>
+                        </ul>
+                        
+                    </div>
+                </section> -->
+
+        </div>
+
+            <section class="introText parallax">
+
+
+                <div class="introTextContainer reveal">
+
+<h3 class="hide">Thanks for visiting!</h3>
+
+                    <p class="">Snow Denn Lodge is a beautiful lodge located in the heart
+                        of
+                        Methven on the doorstep to Mt Hutt ski field. Within our
+                        spacious ski style lodges we have affordable rooms to
+                        cater to all.
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="seperate overlay parallax" id="points">
+               
+                    
+
+<h3 class="blockText" id="splitPage">Here at Snow Denn, we have something for
+                        everybody.</h3>
+
+                    
+
+                    
 
 
 
             </section>
+            <section class="points parallax">
+               
+
+                    <div class="pointsContainer reveal">
+
+                    <div class="points1" id="padding">
+
+                        <h4 id="titleIcon1">Two Separate Lodges</h4>
+                      
+
+                        <div id="pointsText1">
+                            <p >We have two lodges containing 9 rooms in each
+                                both
+                                are family and backpacker friendly and we also
+                                have
+                                rooms for those wanting to escape and seek
+                                maximum
+                                comfort and relaxation in a Private premium
+                                en-suited room.</p>
+                        </div>
+                    </div>
 
 
+
+                    <div class="points2">
+
+                        <h4 id="titleIcon2">In the centre of Methven</h4>
+                        
+
+
+
+                        <p id="pointsText2">Within a stone's throw away to
+                            local
+                            the
+                            new Opuke Hot Pools, Cafes, Supermarkets, Bars,
+                            Restaurants,
+                            Mt Hutt Ski Field, Mt Hutt Bike Park, Golf courses
+                            and
+                            recreational facilities.</p>
+                    </div>
+
+
+
+                    <div class="points3">
+
+                        <h4 id="titleIcon3">Free unlimited Wi-Fi</h4>
+                     
+                        <p id="pointsText3">Enjoy unlimited WiFi, for
+                            those that
+                            want
+                            to stay in contact with their folks at home, and
+                            those
+                            that
+                            can't miss their favourite TV series.</p>
+                    </div>
+
+</div>
+
+
+
+           
+            </section>
+<section class="seperate overlay parallax" id="booking">
+               
+                    
+
+                <h3 class="blockText" id="splitPage">Like what you see? Check our availability!</h3>
+                
+                                        
+                
+                                    
+                
+                
+                
+                            </section>
         </main>
-        <aside class="roomsquicklink">
-
+        <aside class="booking parallax">
+            
+           
          
-            <div class="bookingContainer">
+            <div class="bookingContainer review">
 
-                <form id="booking">
+                <form id="bookingForm">
 
                     <div class="checkIn">
                         <span class="form-label">Check In</span>
                         <input class="form-control" type="date">
 
-<div class="checkOut"> -->
                         <span class="form-label">Check Out</span>
                         <input class="form-control" type="date">
                     </div>
@@ -218,8 +265,21 @@
                 <a href="book.html" id="quickbook">Go to Booking Page to secure your room!</a>
             </div> -->
         </aside>
-        <aside class="reviews">
-            <h4 class="hide">Reviews</h4>
+        
+
+           
+            
+            <aside class="reviews">
+
+ <section class="seperate overlay parallax" id="reviews">
+               
+                    
+
+                <h4 class="blockText" id="splitPage">Past guests have said...:</h4>
+
+
+</section>
+            <div class="reviewsContainer reveal">
             <p class="review1">"I highly recommend Snowdenn Lodge!! The
                 owners are wonderful and always willing to help, the place
                 is
@@ -237,8 +297,14 @@
                 kitchen, and lounge area." </p>
             <p class="reviewDetails">Gabe, via Google Reviews
                 <br> March 2022</p>
+
+                </div>
+            
         </aside>
         <footer class="footer">
+
+<div class="footerContainer">
+
 
 
 
@@ -264,9 +330,8 @@
                 <br>Methven </p>
             <p>Check In: 14:30 |Check Out: 10:00 </p>
             <p>Hours: 8am to 8pm</p>
-
+</div>
         </footer>
         <script src="script.js"></script>
     </body>
-
 </html>

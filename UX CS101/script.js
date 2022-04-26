@@ -1,17 +1,40 @@
-// nav function to show links on mobile with hamburger link
+// hamburgerClick() = nav function to show links on mobile with hamburger link
+
+const navButtons = document.querySelector(".nav");
+
 function hamburgerClick() {
-  const navButtons = document.querySelector(".nav");
-console.log(navButtons);
   
-    if (navButtons.style.display == "none") {
-        navButtons.style.display = "flex";
-    } 
-    else {
-    navButtons.style.display = "none";
-    }
-
-
+  
+  
+  if (navButtons.style.display == "none") {
+      navButtons.style.display = "flex";
+      console.log("navbuttons style display =",navButtons.style.display);
+      console.log("Nav was clicked via onload function");
+  } 
+  else {
+  navButtons.style.display = "none";
+  console.log("navbuttons style display =",navButtons.style.display);
+  }
 }
+// hideNav() = function when onload, hides the nav. then creates an event listener for when the
+//hamburger button on header is clicked to show and hide navigation at will
+
+
+
+window.onload = function hideNav() {
+  const navButtons = document.querySelector(".nav");
+  console.log("hideNav was triggered");
+  console.log("navbuttons style display =",navButtons.style.display);
+  
+  if (navButtons.style.display == "") {
+    navButtons.style.display = "none";
+    console.log("Nav was hidden ");
+} 
+else {
+document.body.addEventListener('onclick', hamburgerClick());
+}
+}
+
 //setting real viewport height to use as variable
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -22,69 +45,44 @@ document.documentElement.style.setProperty('--vw', `${vw}px`);
 
 //add to listen to resizing
 window.addEventListener('resize', () => {
-   
+  console.log("resize function happened");
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     let vw = window.innerWidth * 0.01;
     document.documentElement.style.setProperty('--vw', `${vw}px`);
   });
 
+//calling reveal function to check page position on load
+reveal();
 
 
+//adding event listener to when someone scrolls
+  document.body.addEventListener("scroll", reveal);
 
-//function to show pop up of active deals
-function activeDeals() {
-  console.log("active deals placeholder");
-}
+  //adding event listener to when someone scrolls on phone
+  document.addEventListener('swiped-up', reveal);
 
-//carousel
-
-let slideMarker = document.getElementsByClassName("currentslidemarker");
-let i;
-let slidePosition = 0;
-let intervalId;
-
-automateSlides(SlideShow(slidePosition));
-
-function slidesPlus(i) {
-  SlideShow((slidePosition += i));
-}
-
-function currentSlide(i) {
-  SlideShow((slidePosition = i));
-}
-
-function automateSlides(slideshow) {
-  // check if already an interval has been set up
-  if (!intervalId) {
-    intervalId = setInterval(SlideShow, 2000);
-  }
-}
-
-function SlideShow() {
-  const slides = Array.from(document.getElementsByClassName("carouselslides"));
-
-  if (i > slideMarker.length) {
-    slidePosition = 1;
-  }
-  if (i < 1) {
-    slidePosition = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  //function to make elements with class name 'reveal' to animate by 
+  //fading in to view, from the bottom.
+ function reveal() {
+    let reveals = document.getElementsByClassName("reveal");
+    
+    for (let i = 0; i < reveals.length; i++) {
+      
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      
+      let elementVisible = 1;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+        
+      } 
+      else {
+        reveals[i].classList.remove("active");
+        
+      }
+    }
   }
 
-  slidePosition++;
 
-  if (slidePosition > slides.length) {
-    slidePosition = 1;
-  }
-
-  for (i = 0; i < slideMarker.length; i++) {
-    slideMarker[i].className = slideMarker[i].className.replace(" enable", "");
-  }
-
-  slides[slidePosition - 1].style.display = "inline";
-  slideMarker[slidePosition - 1].className += " enable";
   
-}
