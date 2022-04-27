@@ -214,12 +214,7 @@ header {
 font-weight: 600;
 }
 
-.introContainer-nav {
 
-  
-
-  
-}
 
 /* this is for desktop only 
 .nav {
@@ -231,16 +226,20 @@ height: calc(var(--vh, 1vh) * 10);
   column-gap: 20px;
 } */
 
-.nav {
+#nav {
     background-color: #5f8ac2;
-    position: absolute;
-    top: 25%;
-  display: flex;
+    position:relative;
+    transform: translateY(-450px);
+    opacity: 1;
+    transition: 1s all ease;
   flex-direction: column;
   font-size:0.8rem;
   width: 100%;
 }
-
+#nav.navReveal {
+    transform: translateY(30px);
+   display:flex;
+}
 .navButton {
   display: flex;
   justify-content: center;

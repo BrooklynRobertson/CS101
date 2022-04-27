@@ -1,18 +1,41 @@
+var sheet = document.createElement('style');
+
+
 // hamburgerClick() = nav function to show links on mobile with hamburger link
 
-const navButtons = document.querySelector(".nav");
+const navButtons = document.getElementById("nav");
+console.log(navButtons);
+//  function animateNav () {
+  
+//     let id = null;
+    
+//     let pos = 0;
+//     clearInterval(id);
+//     id = setInterval(frame, 1);
+//     function frame() {
+//       if (pos == 100) {
+//         clearInterval(id);
+//       } else {
+//         pos++; 
+//         navButtons.style.top = -25 + "%"; 
+        
+//       }
+//     }
+  
+//  }
+document.body.addEventListener('onclick', hamburgerClick());
+
 
 function hamburgerClick() {
   
-  
-  
-  if (navButtons.style.display == "none") {
-      navButtons.style.display = "flex";
-      console.log("navbuttons style display =",navButtons.style.display);
-      console.log("Nav was clicked via onload function");
+  if (navButtons.className == "") {
+     navButtons.classList.add("navReveal");
+
+  console.log("it workednavbuttons style display =",navButtons.style.display);
   } 
   else {
-  navButtons.style.display = "none";
+  navButtons.classList.remove("navReveal");
+
   console.log("navbuttons style display =",navButtons.style.display);
   }
 }
@@ -21,19 +44,16 @@ function hamburgerClick() {
 
 
 
-window.onload = function hideNav() {
-  const navButtons = document.querySelector(".nav");
-  console.log("hideNav was triggered");
-  console.log("navbuttons style display =",navButtons.style.display);
+// window.onload = function hideNav() {
+//   const navButtons = document.querySelector(".navReveal");
+//   console.log("hideNav was triggered", navButtons);
   
-  if (navButtons.style.display == "") {
-    navButtons.style.display = "none";
-    console.log("Nav was hidden ");
-} 
-else {
-document.body.addEventListener('onclick', hamburgerClick());
-}
-}
+//   if (navButtons.classList == "navReveal") {
+//     navButtons.classList.remove("navReveal");
+//     console.log("nav was removed: " ,navButtons.classList);
+// } 
+
+// }
 
 //setting real viewport height to use as variable
 let vh = window.innerHeight * 0.01;
