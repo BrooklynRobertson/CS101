@@ -1,0 +1,93 @@
+/* Carousel on home page */
+
+
+.carouselContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  height:calc(var(--vh, 1vh) * 60);
+}
+
+
+ul {
+  list-style-type: none;
+  width: 90%;
+  padding:0px;
+  box-sizing: border-box;
+  text-align-last: center;
+}
+
+img.carouselslides {
+  height: auto;
+  max-width: 90%;
+}
+.slider {
+  width: calc(var(--vw, 1vw) * 100);
+  display: flex;
+  justify-content: space-evenly;
+}
+.currentslidemarker {
+  cursor: pointer;
+  height: calc(var(--vh, 1vh) * 0.4);
+  width: calc(var(--vw, 1vw) * 2);
+  background-color: #af3800;
+  border-radius: 20%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.slideshowplacement {
+  text-align: center;
+  margin-top: -5%;
+}
+
+.enable,
+.slideshowplacement:hover {
+  background-color: #84a4cd7b;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 2;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 2;
+  }
+}
+
+.forwardbutton,
+.backbutton {
+  cursor: pointer;
+  width: auto;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: xx-large;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+#slideButtons {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+}

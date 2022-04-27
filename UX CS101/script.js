@@ -1,28 +1,11 @@
-var sheet = document.createElement('style');
+
 
 
 // hamburgerClick() = nav function to show links on mobile with hamburger link
-
+const title = document.querySelector("#titleMain");
 const navButtons = document.getElementById("nav");
-console.log(navButtons);
-//  function animateNav () {
-  
-//     let id = null;
-    
-//     let pos = 0;
-//     clearInterval(id);
-//     id = setInterval(frame, 1);
-//     function frame() {
-//       if (pos == 100) {
-//         clearInterval(id);
-//       } else {
-//         pos++; 
-//         navButtons.style.top = -25 + "%"; 
-        
-//       }
-//     }
-  
-//  }
+
+//listens for the click
 document.body.addEventListener('onclick', hamburgerClick());
 
 
@@ -30,30 +13,15 @@ function hamburgerClick() {
   
   if (navButtons.className == "") {
      navButtons.classList.add("navReveal");
-
-  console.log("it workednavbuttons style display =",navButtons.style.display);
+    title.classList.add("navReveal");
+    navButtons.stopPropagation();
   } 
   else {
   navButtons.classList.remove("navReveal");
-
-  console.log("navbuttons style display =",navButtons.style.display);
+  title.classList.remove("navReveal");
   }
 }
-// hideNav() = function when onload, hides the nav. then creates an event listener for when the
-//hamburger button on header is clicked to show and hide navigation at will
 
-
-
-// window.onload = function hideNav() {
-//   const navButtons = document.querySelector(".navReveal");
-//   console.log("hideNav was triggered", navButtons);
-  
-//   if (navButtons.classList == "navReveal") {
-//     navButtons.classList.remove("navReveal");
-//     console.log("nav was removed: " ,navButtons.classList);
-// } 
-
-// }
 
 //setting real viewport height to use as variable
 let vh = window.innerHeight * 0.01;
@@ -65,7 +33,6 @@ document.documentElement.style.setProperty('--vw', `${vw}px`);
 
 //add to listen to resizing
 window.addEventListener('resize', () => {
-  console.log("resize function happened");
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     let vw = window.innerWidth * 0.01;
@@ -104,5 +71,29 @@ reveal();
     }
   }
 
+ // Get the pop up
+let popUp = document.getElementById("popUpBooking");
 
-  
+// Get the element that opens the pop up
+let popUpTrigger = document.getElementById("checkAvailibility");
+
+// Get the <span> element that closes the pop up
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the pop up 
+popUpTrigger.onclick = function() {
+  popUp.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the pop up
+span.onclick = function() {
+  popUp.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the popUp, close it
+window.onclick = function(event) {
+  if (event.target == popUp) {
+    popUp.style.display = "none";
+  }
+}
+

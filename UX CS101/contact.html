@@ -7,190 +7,163 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
             charset="utf-8">
         <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body>
-        <header class="header">
-            <div class="introContainer">
-                <img src="images_and_icons/mountainlogo.png"
-                    alt="Snow_Denn_Lodge_Logo" id="logo" />
-
-                <h1 class="pageHeadings">Snow Denn Lodge</h1>
-                <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
-
-
-                <a id="mobileNavButton"><img
-                        src="images_and_icons/navbutton.png"
-                        class="navIcon" id="mobileNavImg"
-                        alt="hamburger_menu_icon"
-                        onclick="hamburgerClick()"></a>
-            </div>
-            <div class="introContainer-nav overlay">
-
-                <nav class="nav">
-                    <a class="navButton" href="index.html">Welcome</a>
-                    <a class="navButton" href="about.html">About</a>
-                    <a class="navButton" href="book.html">Book</a>
-                    <a class="navButton" href="gallery.html">Gallery</a>
-                    <a class="navButton" id="active" href="contact.html">Contact</a>
-                    <a class="navButton" href="activedeals.html">Deals and Discounts</a>
-                </nav>
-            </div>
-        </header>
-        <main class="main">
-            
-            <section id="introText">
-                <h3>Contact Us</h3>
-                <p >Please use the form below to contact us with any questions, feedback, job enquiries or just to say hey!</p>
-                <p >Alternatively, you can contact us via <a id="linked" href="facebook.com/snowdennlodge">Facebook</a>.</p>
-           
-                <div class="container">
-                    <form action="placeholder.html">
-                
-                         <div>
-                             <label for="fname">First Name</label>
-                  
-                          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                         </div> 
-                 <div>
-                    <label for="lname">Last Name</label>
-                  
-                          <input type="text" id="lname" name="lastname" placeholder="Your last name.."> 
-                 </div>
-                          <div>
-                              <label for="reason">Reason for contact</label>
-                
-                          <select id="reason" name="reason">
-                            <option value="enquiry">General OR General Booking Enquiry</option>
-                            <option value="holiday">Book the Snow Denn Lodge Holiday Home</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="job">Job Enquiry</option>
-                          </select>
-                          </div>
-              
-                          <div>
-                             <label for="subject">Message</label>
-                     
-                          <textarea id="subject" name="subject" placeholder="Write something..(optional)" style="height:200px"></textarea>  
-                          </div>
-              
-                         
-               
-                   
-                        <input type="submit" value="Submit">
-                     
-                    </form>
-                  </div>
-   
-                    
-                    <aside id="googleMap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.686906628111!2d171.64373111549713!3d-43.633875079122014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d2dd1d4998e1691%3A0xe6255c35be7ab9bd!2s6%20Bank%20Street%2C%20Methven%207730!5e0!3m2!1sen!2snz!4v1649901928745!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </aside>
-
-
-            </section>
-<div id="jobOffer">
-                        <img src="images_and_icons/joboffer.png">
-                        <a href="join.html">Work with us!</a>
+        <body>
+            <header class="header">
+                <div class="introContainer parallax" id="header">
+                    <div id="titleMain">
+                        <img src="images_and_icons/mountainlogo.png"
+                            alt="Snow_Denn_Lodge_Logo" id="logo" />
+                        <h1 class="pageHeadings">Snow Denn Lodge</h1>
+                        <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
+                        <a id="mobileNavButton"><img
+                                src="images_and_icons/iconmonstr-menu-1-240.png"
+                                class="navIcon" id="mobileNavImg"
+                                alt="hamburger_menu_icon"
+                                onclick="hamburgerClick()"></a>
                     </div>
-
-        </main>
-        <aside class="roomsquicklink">
-        
-
-            <div class="bookingContainer sectionOverlay">
-                <h4>Book Now</h4>
-                <form id="booking">
-
-                    <div class="checkIn">
-                        <span class="form-label">Check In</span>
-                        <input class="form-control" type="date">
-                        <!-- </div>
-<div class="checkOut"> -->
-                        <span class="form-label">Check Out</span>
-                        <input class="form-control" type="date">
+                    <nav class="navReveal" id="nav">
+                        <a class="navButton" href="index.html">Welcome</a>
+                        <a class="navButton" href="about.html">About</a>
+                        <a class="navButton" href="book.html">Book</a>
+                        <a class="navButton" href="placeholder.html">Gallery</a>
+                        <a class="navButton" id="active" href="contact.html">Contact</a>
+                        <a class="navButton" href="activedeals.html">Deals and
+                            Discounts</a>
+                    </nav>
+                </div>
+            </header>
+            <main class="main">
+                <section id="introText">
+                    <h3>Contact Us</h3>
+                    <p>Please use the form below to contact us with any
+                        questions, feedback, job enquiries or just to say hey!</p>
+                    <p>Alternatively, you can contact us via <a
+                            href="facebook.com/snowdennlodge">Facebook</a>.</p>
+                    <div class="contactContainer">
+                        <form name="contactForm" action="" onsubmit="return
+                            firstNameValidate()" method="post" required>
+                            <div class="names">
+                                <label onfocus="isCaps()" for="fName">First Name</label>
+                                    <input type="text" id="fname" name="firstname" maxlength="30"
+                                    placeholder="Your first name:">
+                                        <p id="capsLock">Caps Lock is ON.</p>
+                                <label for="lName">Last Name</label>
+                                    <input type="text" id="lname" name="lastname" maxlength="50"
+                                    placeholder="Your last name:">
+                                        <p id="capsLock">Caps Lock is ON.</p>
+                            </div>
+                            <div class="contactReason">
+                                <label for="reason">Reason for contact</label>
+                                        <select class="reason" name="reason">
+                                            <option value="enquiry">General OR General
+                                                Booking Enquiry</option>
+                                            <option value="holiday">Book the Snow Denn
+                                                Lodge Holiday Home</option>
+                                            <option value="feedback">Feedback</option>
+                                            <option value="job">Job Enquiry</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                            </div>
+                            <div class="messageBox">
+                                <label for="subject">Message</label>
+                                <textarea id="subject" name="subject" maxlength="255"
+                                    placeholder="Write something..(optional)"></textarea>
+                                <p id="capsLock">Caps Lock is ON.</p>
+                            </div>
+                            <button class="submit" type="submit" value="Submit">Submit</button>
+                        </form>
                     </div>
+                    <section class="map">
 
+                        <p>Arriving by bus, there are two shuttle services that
+                            operate from Christchurch to Methven, and can also
+                            provide transport to Mt Hutt.
+                            You can book it online at snowmanshuttles.co.nz or
+                            www.methventravel.co.nz/</p>
 
+                        <img id="googleMap" src="images_and_icons/Screen Shot
+                            2022-04-27 at 9.31.59 PM.png" />
 
-
-                    <div class="guests">
-                        <span class="form-label">Guests</span>
-                        <select class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
-                        <span class="select-arrow"></span>
-
-
-                        <span class="form-label">Kids</span>
-                        <select class="form-control">
-                            <option>0</option>
-                            <option>1</option>
-                            <option>2</option>
-                        </select>
-                        <span class="select-arrow"></span>
-                    </div>
-
-
-
-                    <button class="submit-btn">Check availability</button>
-                </form>
-            </div>
-
-            <!-- <div id="quickbook"></div>
-                <a href="book.html" id="quickbook">Go to Booking Page to secure your room!</a>
-            </div> -->
+                    </section>
+                </section>
+                <section class="reveal" id="jobOffer">
+                    <a href="placeholder.html">
+                        <img
+                            src="images_and_icons/iconmonstr-handshake-7-240.png">
+                        Work
+                        with us!</a>
+                    <p>Do you fancy working for the Best Lodge in Methven?</p>
+                    <p>Do you love all things outdoors and want a great work
+                        life balance?</p>
+                    <p>Do you want to spend 2-3 months exploring Canterbury and
+                        meeting new People?</p>
+                    <p>If you said yes to these questions then maybe you should
+                        consider joining our team. </p>
+                    <p>Methven is bursting with
+                        things to do weather you love hiking, mountain biking,
+                        water sports, fishing, snow skiing and exploring
+                        beautiful scenery.</p>
+                    <p>You will have a great work life
+                        balance with plenty of time to explore and a warm comfy
+                        place to live, interact and meet some awesome people.</p>
+                    <p> We are looking for either couples, singles or Friends to
+                        join our team while we manage our new family and running
+                        the lodge. </p>
+                </section>
+            </main>
         </aside>
         <aside class="reviews">
-            <h4 id="leftAligned">Reviews</h4>
-            <p class="review1">"I highly recommend Snowdenn Lodge!! The
-                owners are wonderful and always willing to help, the place
-                is
-                always spotless and it's in a great location for so many
-                activities. Its also a great place to meet fellow
-                adventurers"</p>
-            <p class="reviewDetails">Danielle, via
-                TripAdvisor
-                <br> October 2021</p>
-            <p class="review2">"Great lodge for relaxing while walking
-                Te
-                Araroa. Laura was a great host and helped organise trail
-                transport. Single room was clean and comfortable. Great
-                showers,
-                kitchen, and lounge area." </p>
-            <p class="reviewDetails">Gabe, via Google Reviews
-                <br> March 2022</p>
+            <section class="seperate overlay parallax" id="reviews">
+                <h4 class="blockText" id="splitPage">Past guests have said...:</h4>
+            </section>
+            <div class="reviewsContainer reveal">
+                <p class="review1">"I highly recommend Snowdenn Lodge!! The
+                    owners are wonderful and always willing to help, the place
+                    is
+                    always spotless and it's in a great location for so many
+                    activities. Its also a great place to meet fellow
+                    adventurers"</p>
+                <p class="reviewTag1">Danielle, via
+                    TripAdvisor
+                    <br> October 2021</p>
+                <p class="review2">"Great lodge for relaxing while walking
+                    Te
+                    Araroa. Laura was a great host and helped organise trail
+                    transport. Single room was clean and comfortable. Great
+                    showers,
+                    kitchen, and lounge area." </p>
+                <p class="reviewTag2">Gabe, via Google Reviews
+                    <br> March 2022</p>
+            </div>
         </aside>
         <footer class="footer">
-
-
-
-            <div class="footericons">
-                <a
-                    href="https://www.facebook.com/SnowDennLodge/?ref=bookmarks">Facebook
-                    <img
-                        src="images_and_icons/iconmonstr-facebook-4-240.png"
-                        alt="Facebook_icon">
-                </a>
-
-                <a href="contact.html">Contact
-                    <img src="images_and_icons/iconmonstr-email-1-240.png"
-                        alt="Email_icon">
-                </a>
-                <a href="test.html" onclick="activeDeals()">Active Deals
-                    <img src="images_and_icons/iconmonstr-tag-22-240.png"
-                        alt="active_deals_icon">
-                </a>
+            <div class="footerContainer">
+                <div class="footericons">
+                    <a
+                        href="https://www.facebook.com/SnowDennLodge/?ref=bookmarks">Facebook
+                        <img
+                            src="images_and_icons/iconmonstr-facebook-4-240.png"
+                            alt="Facebook_icon">
+                    </a>
+                    <a href="contact.html">Contact
+                        <img src="images_and_icons/iconmonstr-email-1-240.png"
+                            alt="Email_icon">
+                    </a>
+                    <a href="activedeals.html" onclick="activeDeals()">Active
+                        Deals
+                        <img src="images_and_icons/iconmonstr-tag-22-240.png"
+                            alt="active_deals_icon">
+                    </a>
+                </div>
+                <p>Snow Denn Lodge
+                    <br>6 Bank Street
+                    <br>Methven </p>
+                <p>Check In: 14:30 |Check Out: 10:00 </p>
+                <p>Hours: 8am to 8pm</p>
             </div>
-            <p>Snow Denn Lodge
-                <br>6 Bank Street
-                <br>Methven </p>
-
         </footer>
         <script src="script.js"></script>
+        <script src="phoneHandling.js"></script>
+        <script src="validation.js"></script>
     </body>
-
 </html>

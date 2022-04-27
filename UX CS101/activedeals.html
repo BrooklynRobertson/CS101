@@ -2,126 +2,102 @@
 <html lang="en">
     <head>
         <title>
-            Snow Denn Lodge - Welcome
+            Snow Denn Lodge - Active Deals
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
             charset="utf-8">
-        <link rel="stylesheet" href="carousel.css">
+        <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
         <header class="header">
-            <div id="title" class="introContainer">
-                <img  src="images_and_icons/mountainlogo.png"
-                    alt="Snow_Denn_Lodge_Logo" id="logo" />
-
-                <h1  class="pageHeadings">Snow Denn Lodge</h1>
-                <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
-
-
-                <a  id="mobileNavButton"><img
-                        src="images_and_icons/navbutton.png"
-                        class="navIcon" id="mobileNavImg"
-                        alt="hamburger_menu_icon"
-                        onclick="hamburgerClick()"></a>
-            </div>
-            <div class="introContainer-nav overlay">
-
-                <nav class="nav">
+            <div class="introContainer parallax" id="header">
+                <div id="titleMain">
+                    <img src="images_and_icons/mountainlogo.png"
+                        alt="Snow_Denn_Lodge_Logo" id="logo" />
+                    <h1 class="pageHeadings">Snow Denn Lodge</h1>
+                    <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
+                    <a id="mobileNavButton"><img
+                            src="images_and_icons/iconmonstr-menu-1-240.png"
+                            class="navIcon" id="mobileNavImg"
+                            alt="hamburger_menu_icon"
+                            onclick="hamburgerClick()"></a>
+                </div>
+                <nav class="navReveal" id="nav">
                     <a class="navButton" href="index.html">Welcome</a>
-                    <a class="navButton" id="active" href="about.html">About</a>
+                    <a class="navButton" href="about.html">About</a>
                     <a class="navButton" href="book.html">Book</a>
-                    <a class="navButton" href="gallery.html">Gallery</a>
+                    <a class="navButton" href="placeholder.html">Gallery</a>
                     <a class="navButton" href="contact.html">Contact</a>
+                    <a class="navButton" id="active"href="activedeals.html">Deals and Discounts</a>
                 </nav>
             </div>
         </header>
         <main class="main">
-            
-            <section class="introText ">
-                <h3>Introducing your hosts - Laura and Tim</h3>
-                <img id ="lauraTim" src="images_and_icons/lauratime.jfif">
-                <p>In May 2018 Laura and Tim took over Snow Denn Lodge. Plenty of 
-                    inspiration and a new, fresh vibe has been brought to Snow Denn
-                     Lodge, which is slowly being updated and rejuvenated. 
-                    With a passion for all things outdoors and participating in nearly
-                     every activity that Methven & Mt Hutt have to offer these two are
-                      the people you want to talk to about things to see and do in the
-                       area. 
+            <section class="introText parallax">
+                <div class="introTextContainer reveal">
+                    <h3>Thanks for visiting!</h3>
+                    <p>Snow Denn Lodge is a beautiful lodge located in the heart
+                        of
+                        Methven on the doorstep to Mt Hutt ski field. Within our
+                        spacious ski style lodges we have affordable rooms to
+                        cater to all.
                     </p>
+                </div>
             </section>
-            <form action="action_page.php" style="border:1px solid #ccc">
-                <div class="container">
-                  <h1>Sign Up</h1>
-                  <p>Please fill in this form to create an account.</p>
-                  <hr>
-              
-                  <label for="email"><b>Email</b></label>
-                  <input type="text" placeholder="Enter Email" name="email" required>
-              
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-              
-                  <label for="psw-repeat"><b>Repeat Password</b></label>
-                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-              
-                  <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                  </label>
-              
-                  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-              
-                  <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
-                  </div>
+            <section class="points parallax">
+                <div class="pointsContainer reveal">
+                    <div class="points1" id="padding">
+                        <h4 id="titleIcon1">Get your deals!!!</h4>
+                        <div id="pointsText1">
+                            <p>Deals, discounts, and free stuff!</p>
+                        </div>
+                    </div>
+                    <div class="points2">
+                        <h4 id="titleIcon2">Sign up to our newsletter!</h4>
+                        <p id="pointsText2">Sign up to our newsletter to recieve our latest discounts as soon as we release them.</p>
+                        <form name="dealsForm" action="action_page.php">
+                            <div class="dealsContainer">
+                              <h4>Sign Up</h4>
+                              <p>Please fill in this form sign up to the newsletter.</p>
+                              
+                              <label for="fName">First Name</label>
+                              <input onfocus="isCaps()" type="text" placeholder="Enter First Name:" name="fName" required>
+                              <p id="capsLock">Caps Lock is ON.</p>
+                              <label for="email">Email</label>
+                              <input onfocus="isCaps()" type="text" placeholder="Enter Email" name="email" required>
+                              <p id="capsLock">Caps Lock is ON.</p>
+                              
+                          
+                              <label>
+                                <input type="checkbox" checked="checked" name="agree"> I agree to recieving awesome emails.
+                              </label>
+                          
+                              
+                                <button type="button" onclick="alert();" class="cancel">Cancel</button>
+                                <button type="submit" class="submit" onsubmit="return firstNameValidate();" onclick="validateEmail(document.dealsForm.email)" > Sign Up </button>
+                             
+                            </div>
+                          </form>
+                    
+                    
+                    </div>
+                   
                 </div>
-              </form>
-
-              <form action="action_page.php" method="post">
-                <div class="imgcontainer">
-                  <img src="img_avatar2.png" alt="Avatar" class="avatar">
-                </div>
-              
-                <div class="container">
-                  <label for="uname"><b>Username</b></label>
-                  <input type="text" placeholder="Enter Username" name="uname" required>
-              
-                  <label for="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required>
-              
-                  <button type="submit">Login</button>
-                  <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                  </label>
-                </div>
-              
-                <div class="container" style="background-color:#f1f1f1">
-                  <button type="button" class="cancelbtn">Cancel</button>
-                  <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>
-              </form>
-              
-           </main>
-        <aside class="roomsquicklink">
-        
-
-            <div class="bookingContainer sectionOverlay">
-                <h4>Check: Room Availiability</h4>
-                <form id="booking">
-
+            </section>
+            <section class="seperate overlay parallax" id="booking">
+                <h3 class="blockText" id="splitPage">Like what you see? Check
+                    our availability!</h3>
+            </section>
+        </main>
+        <aside class="booking parallax">
+            <div class="bookingContainer review">
+                <form id="bookingForm">
                     <div class="checkIn">
                         <span class="form-label">Check In</span>
                         <input class="form-control" type="date">
-                        <!-- </div>
-<div class="checkOut"> -->
                         <span class="form-label">Check Out</span>
                         <input class="form-control" type="date">
                     </div>
-
-
-
-
                     <div class="guests">
                         <span class="form-label">Adults</span>
                         <select class="form-control">
@@ -131,9 +107,7 @@
                             <option>4+</option>
                         </select>
                         <span class="select-arrow"></span>
-
-
-                        <span class="form-label">Children</span>
+                        <span class="form-label">Children (under 12)</span>
                         <select class="form-control">
                             <option>0</option>
                             <option>1</option>
@@ -142,64 +116,62 @@
                         </select>
                         <span class="select-arrow"></span>
                     </div>
-
-
-
-                    <button class="submit-btn">Check Availiability</button>
+                    <button class="submit-btn">Check availability</button>
                 </form>
             </div>
-
-            <!-- <div id="quickbook"></div>
-                <a href="book.html" id="quickbook">Go to Booking Page to secure your room!</a>
-            </div> -->
         </aside>
         <aside class="reviews">
-            <h4 id="leftAligned">Reviews</h4>
-            <p class="review1">"I highly recommend Snowdenn Lodge!! The
-                owners are wonderful and always willing to help, the place
-                is
-                always spotless and it's in a great location for so many
-                activities. Its also a great place to meet fellow
-                adventurers"</p>
-            <p class="reviewDetails">Danielle, via
-                TripAdvisor
-                <br> October 2021</p>
-            <p class="review2">"Great lodge for relaxing while walking
-                Te
-                Araroa. Laura was a great host and helped organise trail
-                transport. Single room was clean and comfortable. Great
-                showers,
-                kitchen, and lounge area." </p>
-            <p class="reviewDetails">Gabe, via Google Reviews
-                <br> March 2022</p>
+            <section class="seperate overlay parallax" id="reviews">
+                <h4 class="blockText" id="splitPage">Past guests have said...:</h4>
+            </section>
+            <div class="reviewsContainer reveal">
+                <p class="review1">"I highly recommend Snowdenn Lodge!! The
+                    owners are wonderful and always willing to help, the place
+                    is
+                    always spotless and it's in a great location for so many
+                    activities. Its also a great place to meet fellow
+                    adventurers"</p>
+                <p class="reviewTag1">Danielle, via
+                    TripAdvisor
+                    <br> October 2021</p>
+                <p class="review2">"Great lodge for relaxing while walking
+                    Te
+                    Araroa. Laura was a great host and helped organise trail
+                    transport. Single room was clean and comfortable. Great
+                    showers,
+                    kitchen, and lounge area." </p>
+                <p class="reviewTag2">Gabe, via Google Reviews
+                    <br> March 2022</p>
+            </div>
         </aside>
         <footer class="footer">
-
-
-
-            <div class="footericons">
-                <a
-                    href="https://www.facebook.com/SnowDennLodge/?ref=bookmarks">Facebook
-                    <img
-                        src="images_and_icons/iconmonstr-facebook-4-240.png"
-                        alt="Facebook_icon">
-                </a>
-
-                <a href="contact.html">Contact
-                    <img src="images_and_icons/iconmonstr-email-1-240.png"
-                        alt="Email_icon">
-                </a>
-                <a href="test.html" onclick="activeDeals()">Active Deals
-                    <img src="images_and_icons/iconmonstr-tag-22-240.png"
-                        alt="active_deals_icon">
-                </a>
+            <div class="footerContainer">
+                <div class="footericons">
+                    <a
+                        href="https://www.facebook.com/SnowDennLodge/?ref=bookmarks">Facebook
+                        <img
+                            src="images_and_icons/iconmonstr-facebook-4-240.png"
+                            alt="Facebook_icon">
+                    </a>
+                    <a href="contact.html">Contact
+                        <img src="images_and_icons/iconmonstr-email-1-240.png"
+                            alt="Email_icon">
+                    </a>
+                    <a href="activedeals.html">Active
+                        Deals
+                        <img src="images_and_icons/iconmonstr-tag-22-240.png"
+                            alt="active_deals_icon">
+                    </a>
+                </div>
+                <p>Snow Denn Lodge
+                    <br>6 Bank Street
+                    <br>Methven </p>
+                <p>Check In: 14:30 |Check Out: 10:00 </p>
+                <p>Hours: 8am to 8pm</p>
             </div>
-            <p>Snow Denn Lodge
-                <br>6 Bank Street
-                <br>Methven </p>
-
         </footer>
         <script src="script.js"></script>
+        <script src="phoneHandling.js"></script>
+        <script src="validation.js"></script>
     </body>
-
 </html>
