@@ -7,186 +7,202 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
             charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <script src="phoneHandling.js"></script>
-        <script src="validation.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script defer src="script.js"></script>
     </head>
-    <body>
-        <header class="header">
-            <div class="introContainer parallax" id="header">
-                <div id="titleMain">
-                    <img src="images_and_icons/mountainlogo.png"
-                        alt="Snow_Denn_Lodge_Logo" id="logo" />
-                    <h1 class="pageHeadings">Snow Denn Lodge</h1>
-                    <h2 class="pageHeadings">Private Lodge & Holiday Home</h2>
-                    <a id="mobileNavButton"><img
-                            src="images_and_icons/iconmonstr-menu-1-240.png"
-                            class="navIcon" id="mobileNavImg"
-                            alt="hamburger_menu_icon"
-                            onclick="hamburgerClick()"></a>
-                </div>
-                <nav class="navReveal" id="nav">
+    <body id="index">
+        <header>
+            <div class="headerContainer parallax"id="header">
+            <div class="headerContainer" id="titleMain">
+
+                <img src="images_and_icons/mountainlogo.png"
+                    alt="Snow_Denn_Lodge_Logo" id="logo" />
+                <h1>Snow Denn Lodge</h1>
+                <h2>Private Lodge & Holiday Home</h2>
+                <a href="#nav"class="toggle" id="collapsedNavButton"><img
+                        src="images_and_icons/iconmonstr-menu-1-240.png"
+                        
+                        alt="hamburger_menu_icon"></a>
+            </div>
+            
+                <nav id="nav" class="toggleContent">
                     <a class="navButton" id="active" href="index.html">Welcome</a>
                     <a class="navButton" href="about.html">About</a>
                     <a class="navButton" href="book.html">Book</a>
                     <a class="navButton" href="placeholder.html">Gallery</a>
                     <a class="navButton" href="contact.html">Contact</a>
-                    <a class="navButton" href="activedeals.html">Deals and Discounts</a>
+                    <a class="navButton" href="activedeals.html">Deals and
+                        Discounts</a>
                 </nav>
-            </div>
+           
+        </div>
         </header>
-        <main class="main">
-            <section class="introText parallax">
-                <div class="introTextContainer reveal">
-                    <h3 class="hide">Thanks for visiting!</h3>
-                    <p>Snow Denn Lodge is a beautiful lodge located in the heart
-                        of
-                        Methven on the doorstep to Mt Hutt ski field. Within our
-                        spacious ski style lodges we have affordable rooms to
-                        cater to all.
-                    </p>
-                </div>
+        <main>
+            <section class="introductions parallax">
+                <div class="introductionsContainer reveal">
+                <h3>Thanks for visiting!</h3>
+                <p>Snow Denn Lodge is a beautiful lodge located in the heart
+                    of
+                    Methven on the doorstep to Mt Hutt ski field. Within our
+                    spacious ski style lodges we have affordable rooms to
+                    cater to all.
+                </p>
+            </div>
             </section>
-            <section class="seperate overlay parallax" id="points">
-                <h3 class="blockText" id="splitPage">Here at Snow Denn, we have
+            <section class="pagePoints parallax">
+            <div class="pageBreaker " id="points">
+<h3>Here at Snow Denn, we have
                     something for
                     everybody.</h3>
-            </section>
-            <section class="points parallax">
+            </div>
+            
                 <div class="pointsContainer reveal">
-                    <div class="points1" id="padding">
-                        <h4 id="titleIcon1">Two Separate Lodges</h4>
-                        <div id="pointsText1">
-                            <p>We have two lodges containing 9 rooms in each
-                                both
-                                are family and backpacker friendly and we also
-                                have
-                                rooms for those wanting to escape and seek
-                                maximum
-                                comfort and relaxation in a Private premium
-                                en-suited room.</p>
-                        </div>
-                    </div>
-                    <div class="points2">
-                        <h4 id="titleIcon2">In the centre of Methven</h4>
-                        <p id="pointsText2">Within a stone's throw away to
-                            local
-                            the
-                            new Opuke Hot Pools, Cafes, Supermarkets, Bars,
-                            Restaurants,
-                            Mt Hutt Ski Field, Mt Hutt Bike Park, Golf courses
-                            and
-                            recreational facilities.</p>
-                    </div>
-                    <div class="points3">
-                        <h4 id="titleIcon3">Free unlimited Wi-Fi</h4>
-                        <p id="pointsText3">Enjoy unlimited WiFi, for
-                            those that
-                            want
-                            to stay in contact with their folks at home, and
-                            those
-                            that
-                            can't miss their favourite TV series.</p>
+
+                
+                
+                <div class="points1">
+                    <h4>Two Separate Lodges</h4>
+                    <div class="pointsText1">
+                        <p>We have two lodges containing 9 rooms in each
+                            both
+                            are family and backpacker friendly and we also
+                            have
+                            rooms for those wanting to escape and seek
+                            maximum
+                            comfort and relaxation in a Private premium
+                            en-suited room.</p>
                     </div>
                 </div>
-            </section>
-            <section class="seperate overlay parallax" id="booking">
-                <h3 class="blockText" id="splitPage">Like what you see? Check
-                    our availability!</h3>
-            </section>
-        </main>
-        <aside class="booking parallax">
-            <div class="bookingContainer review">
-                <!-- <form id="bookingForm">
-                    <div class="checkIn">
-                        <label for="cIn">Check In</label>
-                        <input type="date" >
-                        <label for="cOut">Check Out</label>
-                        <input type="date" min="01-05-2022" max="31-12-2022" required>
-                    </div>
-                    <div class="guests">
-                        <label for="optionsAdult">Adults</label>
-                        <select class="options" name="options" required>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4+</option>
-                        </select>
-                        <label for="optionsKids">Children (under 12)</label>
-                        <select class="options" name="options" required>
-                            <option>0</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3+</option>
-                        </select>
-                        <span class="arrow"></span>
-                    </div> -->
-                    <button id="checkAvailibility" type="submit" onSubmit="return false">Check availability</button>
-                </form>
             </div>
-            <div id="popUpBooking">
+
+                <div class="points2 reveal">
+                    <h4>In the centre of Methven</h4>
+                    <p class="pointsText2">Within a stone's throw away to
+                        local
+                        the
+                        new Opuke Hot Pools, Cafes, Supermarkets, Bars,
+                        Restaurants,
+                        Mt Hutt Ski Field, Mt Hutt Bike Park, Golf courses
+                        and
+                        recreational facilities.</p>
+                </div>
+                <div class="points3 reveal">
+                    <h4>Free unlimited Wi-Fi</h4>
+                    <p class="pointsText3">Enjoy unlimited WiFi, for
+                        those that
+                        want
+                        to stay in contact with their folks at home, and
+                        those
+                        that
+                        can't miss their favourite TV series.</p>
+                </div>
+            
+        </section>
+          
+        </main>
+        <aside class="checkRooms parallax">
+            <div class="seperate parallax" id="booking">
+
+          </div>
+            <div class="bookingContainer reveal">
+                <div id="popUpBooking" class="showFast toggleContent ">
                 <div class="popHeader">
-                  <span class="close">&times;</span>
-                  <h2>Rooms are: AVAILABLE</h2>
+                    <span class="close toggle">&times;</span>
+                    <h2>Rooms are: AVAILABLE</h2>
                 </div>
                 <div class="popBody">
-                  <p>We have rooms available for your chosen dates!</p>
-                  <p>Please visit the link below to secure your booking:</p>
+                    <p>We have rooms available for your chosen dates!</p>
+                    <p>Please visit the link below to secure your booking:</p>
                 </div>
                 <div class="popFooter">
-                    <a href="https://book.bookit.co.nz/snow-denn-lodge/accommodation/137968">Click Here</a>
+                    <a
+                        href="https://book.bookit.co.nz/snow-denn-lodge/accommodation/137968">Click
+                        Here</a>
                 </div>
-              </div>
+    </div> 
+            <form id="bookingForm" action="/" method="post">
+                <h3>Like what you see? Check
+                our availability!</h3>
+                <div class="guestAdult">
+                    <label for="optionsAdult">Adults</label>
+                    <select class="options" name="options" required>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4+</option>
+                    </select>
+                </div>
+                <div class="guestChild">
+                    <label for="optionsChild">Children</label>
+                    <select class="options" name="options" required>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3+</option>
+                    </select>
+                    <span class="arrow"></span>
+                </div>
+                <div class="checkInOut">
+                    <label for="duration">Duration of Stay</label>
+                    <input id="date" class="date" placeholder="26 April 2022 - 4 May 2022"tabindex="-1" type="date">
+                </div>
+               
+                
+                <button id="checkAvailability" class="toggle" type="submit" value="">Check availability</button>
+            </div>
+        </form>
+       
+        </div> 
+            
+           
         </aside>
         <aside class="reviews">
-            <section class="seperate overlay parallax" id="reviews">
-                <h4 class="blockText" id="splitPage">Past guests have said...:</h4>
-            </section>
+            <div class="seperate parallax" id="reviews">
+            <h4>Recent Reviews</h4>
+        </div>
             <div class="reviewsContainer reveal">
-                <p class="review1">"I highly recommend Snowdenn Lodge!! The
+                <blockquote class="review1">"I highly recommend Snowdenn Lodge!! The
                     owners are wonderful and always willing to help, the place
                     is
                     always spotless and it's in a great location for so many
                     activities. Its also a great place to meet fellow
                     adventurers"</p>
-                <p class="reviewTag1">Danielle, via
+                <i class="reviewTag1">Danielle, via
                     TripAdvisor
-                    <br> October 2021</p>
-                <p class="review2">"Great lodge for relaxing while walking
+                    <br> October 2021</i></blockquote>
+                <blockquote class="review2">"Great lodge for relaxing while walking
                     Te
                     Araroa. Laura was a great host and helped organise trail
                     transport. Single room was clean and comfortable. Great
                     showers,
-                    kitchen, and lounge area." </p>
-                <p class="reviewTag2">Gabe, via Google Reviews
-                    <br> March 2022</p>
+                    kitchen, and lounge area." </i>
+                <i class="reviewTag2">Gabe, via Google Reviews
+                    <br> March 2022</i></blockquote>
             </div>
         </aside>
-        <footer class="footer">
-            <div class="footerContainer">
-                <div class="footericons">
-                    <a
-                        href="https://www.facebook.com/SnowDennLodge/?ref=bookmarks">Facebook
-                        <img
-                            src="images_and_icons/iconmonstr-facebook-4-240.png"
-                            alt="Facebook_icon">
-                    </a>
-                    <a href="contact.html">Contact
-                        <img src="images_and_icons/iconmonstr-email-1-240.png"
-                            alt="Email_icon">
-                    </a>
-                    <a href="activedeals.html" onclick="activeDeals()">Active
-                        Deals
-                        <img src="images_and_icons/iconmonstr-tag-22-240.png"
-                            alt="active_deals_icon">
-                    </a>
-                </div>
-                <p>Snow Denn Lodge
-                    <br>6 Bank Street
-                    <br>Methven </p>
-                <p>Check In: 14:30 |Check Out: 10:00 </p>
-                <p>Hours: 8am to 8pm</p>
+        <footer>
+            <div class="footerLinksContainer">
+                <a href="https://www.facebook.com/SnowDennLodge/?ref=bookmarks">Facebook
+                    <img
+                        src="images_and_icons/iconmonstr-facebook-4-240.png"
+                        alt="Facebook_icon">
+                </a>
+                <a href="contact.html">Contact
+                    <img src="images_and_icons/iconmonstr-email-1-240.png"
+                        alt="Email_icon">
+                </a>
+                <a href="activedeals.html">Active Deals
+                    <img src="images_and_icons/iconmonstr-tag-22-240.png"
+                        alt="active_deals_icon">
+                </a>
             </div>
+            <p>Snow Denn Lodge
+                <br>6 Bank Street
+                <br>Methven </p>
+            <p>Check In: 14:30 |Check Out: 10:00 </p>
+            <p>Hours: 8am to 8pm</p>
         </footer>
-        <script src="script.js"></script>
+        <script></script>
     </body>
 </html>

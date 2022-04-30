@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
+<script defer src="script.js"></script>
     </head>
     <body id="index">
         <header>
@@ -27,70 +27,80 @@
             </div>
             
                 <nav id="nav" class="toggleContent">
-                    <a class="navButton" href="index.html">Welcome</a>
+                    <a class="navButton" id="active" href="index.html">Welcome</a>
                     <a class="navButton" href="about.html">About</a>
                     <a class="navButton" href="book.html">Book</a>
                     <a class="navButton" href="placeholder.html">Gallery</a>
                     <a class="navButton" href="contact.html">Contact</a>
-                    <a class="navButton" id="active"href="activedeals.html">Deals and Discounts</a>
+                    <a class="navButton" href="activedeals.html">Deals and
+                        Discounts</a>
                 </nav>
            
+        </div>
+        </header>
+        <main>
+            <section class="introductions parallax">
+                <div class="introductionsContainer reveal">
+                <h3>Thanks for visiting!</h3>
+                <p>Snow Denn Lodge is a beautiful lodge located in the heart
+                    of
+                    Methven on the doorstep to Mt Hutt ski field. Within our
+                    spacious ski style lodges we have affordable rooms to
+                    cater to all.
+                </p>
             </div>
-            </header>
-            <main>
-                <section class="introductions parallax">
-                    <div class="introductionsContainer reveal">
-                    <h3>Thanks for visiting!</h3>
-                    <p>Snow Denn Lodge is a beautiful lodge located in the heart
-                        of
-                        Methven on the doorstep to Mt Hutt ski field. Within our
-                        spacious ski style lodges we have affordable rooms to
-                        cater to all.
-                    </p>
-                </div>
             </section>
-            <section class="points parallax">
+            <div class="pageBreaker parallax" id="points">
+<h3 class="hide">Here at Snow Denn, we have
+                    something for
+                    everybody.</h3>
+            </div>
+            <section class="pagePoints parallax">
                 <div class="pointsContainer reveal">
-                    <div class="points1" id="padding">
-                        <h4 id="titleIcon1">Get your deals!!!</h4>
-                        <div id="pointsText1">
-                            <p>Deals, discounts, and free stuff!</p>
-                        </div>
+
+                
+                
+                <div class="points1">
+                    <h4>Two Separate Lodges</h4>
+                    <div class="pointsText1">
+                        <p>We have two lodges containing 9 rooms in each
+                            both
+                            are family and backpacker friendly and we also
+                            have
+                            rooms for those wanting to escape and seek
+                            maximum
+                            comfort and relaxation in a Private premium
+                            en-suited room.</p>
                     </div>
-                    <div class="points2">
-                        <h4 id="titleIcon2">Sign up to our newsletter!</h4>
-                        <p id="pointsText2">Sign up to our newsletter to recieve our latest discounts as soon as we release them.</p>
-                        <form id="subscribe" action="#">
-                            <div class="dealsContainer">
-                              <h4>Sign Up</h4>
-                              <p>Please fill in this form sign up to the newsletter.</p>
-                              <form id="subscribe" class="form">
-                                <h4>Sign Up</h4>
-                                <div class="form-field">
-                                    <label for="username">Username:</label>
-                                    <input type="text" name="username" id="fName" autocomplete="off">
-                                    <small></small>
-                                </div>
-                    
-                                <div class="form-field">
-                                    <label for="email">Email:</label>
-                                    <input type="text" name="email" id="email" autocomplete="off">
-                                    <small></small>
-                                </div>
-                              
-                          
-                              <label>
-                                <input type="checkbox" checked="checked" name="agree" required> I agree to recieving awesome emails.
-                              </label>
-                          
-                              
-                                
-                                <button type="submit" class="submit"> Sign Up </button>
-                             
-                            </div>
-                          </form>
-                    
-          
+                </div>
+            </div>
+
+                <div class="points2 reveal">
+                    <h4>In the centre of Methven</h4>
+                    <p class="pointsText2">Within a stone's throw away to
+                        local
+                        the
+                        new Opuke Hot Pools, Cafes, Supermarkets, Bars,
+                        Restaurants,
+                        Mt Hutt Ski Field, Mt Hutt Bike Park, Golf courses
+                        and
+                        recreational facilities.</p>
+                </div>
+                <div class="points3 reveal">
+                    <h4>Free unlimited Wi-Fi</h4>
+                    <p class="pointsText3">Enjoy unlimited WiFi, for
+                        those that
+                        want
+                        to stay in contact with their folks at home, and
+                        those
+                        that
+                        can't miss their favourite TV series.</p>
+                </div>
+            
+        </section>
+          <div class="seperate parallax" id="booking">
+
+          </div>
         </main>
         <aside class="checkRooms">
             <div class="bookingContainer reveal">
@@ -191,6 +201,6 @@
             <p>Check In: 14:30 |Check Out: 10:00 </p>
             <p>Hours: 8am to 8pm</p>
         </footer>
-      <script defer src="script.js"></script>
+        <script></script>
     </body>
 </html>
